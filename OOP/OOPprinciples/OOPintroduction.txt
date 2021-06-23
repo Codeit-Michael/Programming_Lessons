@@ -1,0 +1,106 @@
+Primitive Data Types>>Object>>Class
+
+Primitive data Types- stores single, simple, values
+*Byte  *Int  *Float  *Boolean
+
+OOP - used for making complex programs by grouping all related funcs
+
+OOP's 4 Main Principle
+~Encapsulation
+-idea of hiding data whithin a class,preventing anything outside that class from
+directly interacting with it
+-other class members can interact with attributes of another object trough its
+methods/functions but not directly
+
+EX: The dog has a private method: bark(). The dog class can call this whenever it
+wants, and the other classes can not tell the dog when to bark. There are also
+public methods such as sleep(), play() and eat() that are available to oth classes.
+Each of these functions modifies the internal state of the Dog class & may invoke
+bark(),when this happens the private state and public methods are bonded. 
+
+
+~Abstraction
+-only showing essential details and keeping everything else hidden
+-means as long as you understand the output, proccess is not important to you
+-Big softwares needs group of programmers so its important that y'all can work
+without the knowledge of your colleagues (means you can all work independently
+but you all know what's happening on the project or what's new, etc.) thats why
+we need Interface and Implementation
+--Interface -code section where all objects are in
+--Implementation -code of methods should be hidden/separate from output
+
+
+~Inheritance
+-allows classes to derive from other classes
+-has different kind of class from the same parent; class Weapon has sword
+and gun object, diff. characteristics but same weapon. Weapon will be the super
+class while the gun and the sword was the subclasses.
+-Access Modifier -change which classes have access to other classes, methods, or
+attributes. It has 3 main  focus:
+--Public members -can be accessed from anywhere in your program. This includes
+inside the class hierarchy; also defined as outside in the rest of the program
+--Private -can be only accessed from within the same class that the member is
+defined/assigned. It also allows you to create multiple values every class in the
+same name  
+--Protected -can be only accessed by the other subclasses inside the said subclass
+
+
+~Polymorphism
+-methods that are able to take on many forms. 2 types:
+
+--Dynamic polymorphism -occurs during runtime
+-sub and super class have the same name but have difference of
+implementation(value).The implementation/value of the sub will overwrite the 
+the superclass's implementation/value of instance. OVERWRITE not REWRITE;
+ex, class weapon has damage() that tells us its damage, let's say its 3/10. It
+has a class Gun which its damage() has 7/10. If you create an instance of Gun
+called myGun, its damage is 7/10. BUt the class Gun's damage is 3/10. Means the
+form of method is based on what hierarchy it was called/created from.
+
+--Static polymorphism -occurs during compile time(during coding).
+-methods with the same name but different parameters -also called method overloading
+-ex, we have 3damage(), but the 1st asks if it will kill, 2nd if it can cut, 3rd
+if it will crush
+
+-If you were careless in using method overloading, then it may cause errors
+
+########################### SHORTER EXPLANATION ###############################
+
+###OOP PRINCIPLE###
+~Encapsulation:
+-prevents everything outside to interact with private state/hidden objects but
+you can access it by other public methods(functions) inside the class.
+
+EX: The dog has a private method: bark(). The dog class can call this whenever it
+wants, and the other classes can not tell the dog when to bark. There are also
+public methods such as sleep(), play() and eat() that are available to oth class/es.
+Each of these functions modifies the internal state of the Dog class & may invoke
+bark(),when this happens the private state and public methods are bonded.
+
+
+~Abstraction:
+-get only the needed information in a big path of informations
+
+EX: Making a dating app. You need to get all the infos like, usr name, age,
+status, interests, profession, etc. but you only select the name, age, & status
+for their profile and they can see oth info if they click the "see more...". What
+I mean is, you only select the info you need from bunch of informations.
+
+
+~Inheritance
+-ability of one object to acquire some/all properties of another object. Its
+major advantage is you can reuse the fields and methods of the existing class.
+-In Java, there are various types of inheritances: single, multiple, multilevel,
+hierarchical, and hybrid.
+
+EX: A child inherits the traits of his/her parents
+
+
+~Polymorphism
+-Polymorphism gives us a way to use a class exactly like its parent so there is
+no confusion with mixing types. This being said, each child sub-class keeps its
+own functions/methods as they are.
+
+EX: If we had a superclass called Mammal that has a method called mammalSound().
+The sub-classes of Mammals could be Dogs, whales, elephants, and horses. Each of
+these would have their own iteration of a mammal sound (dog-barks, whale-clicks)
