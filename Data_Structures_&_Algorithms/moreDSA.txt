@@ -1,0 +1,67 @@
+Data Structure(DS)- used in making good algorithms and to make it readable.
+
+*Abstract Data Type (ADT)- concepts or illustration that shows how its data
+structure's flow looks like. Just the visualization, no pseudos or actual code.
+ex: ADT >> DS
+1. Lists >> arrays or linked lists
+2. Queue >> linked list, Array or Stack based Queue
+3. Map >> Tree map, Hash map/Hash table
+4. Vehicle >> car, airplane, boat
+
+*Computational Complexity Analysis
+-Time and Space complexity
+-in computing worst case time complexity, we just list down the computations and
+compute them. The one highest answer means the formula used was its worst case
+time complexity. Ex: f(n) = 7log(n)^3+15n^2+2n^3+8. We eliminate the constant
+which is 8, and if we say n=2, the 2n^3 gives us the highest answer so our worst
+case scenario is O(n^3).
+-2 for loops give you a quadratic. ex: quadEx.png
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arrays (only in other languages)
+
+Static arrays
+-array with fixed length that has index from 0 to len(list)-1 means indexable
+used mainly for storing/accessing sequential data,temporarily storing used in
+dymanic programming, etc.
+
+Dynamic array
+-can grow and srhink based on size
+-add capacity first then add the object
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Singly and Doubly Linked Lists
+singly- linked list with linear structure which is only pointing to the next
+item and cannot go backwards
+doubly- linked list with linear structure which can be go forward and backwards
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Stacks methods
+-Last in, First out (LIFO principle)
+
+Methods of stacks
+Push()
+-enter elements bottom to top
+
+Pop()
+-remove elements top to bottom
+
+Peek()
+-return elements at the top
+
+Contains()
+-searching w/o modifying anything
+-allows searching in process of taking objects as args then return a booleans
+-Contains(Object) Outout: True or False (Booleans)
+
+
+Time Complexity Equation
+
+Accessing -O(n)
+-ex: we had a stack of rocks and we need to get the bottom rock,
+-for every rock we need to remove or to pop (which is the datasets), we need an
+action for each rock(or the opt required)
+
+Searching O(n)
+-same as accessing
+
+Insert & delete O(1)
+-can be done in one process
+ex: undo/redo

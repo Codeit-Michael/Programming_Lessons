@@ -1,0 +1,37 @@
+All of O(n) means for every element, repeat it or ask it base on the range or
+array size.
+
+Bubble Sort
+-compares the left to the right. If the right is greater, it
+ will move to the nxt item. Else, switch them then compare
+again to the nxt at the right. If the right is lower then switch
+your current, else move at the nxt item. Elif it is the end of
+the list, recurse the func & start again at the beginning.
+- It takes O(sqr(n)) just like selection sort because its built
+like: for items in list, append the smallest. To find the it,
+it runs for items in list, compare the first to the next, if 
+greater switch, elif lesser move to next.
+
+Insertion Sort
+-Compares the next item from the first item. if nxt > current,
+move to nxt right. Else, switch them then compare again the nxt
+to your current.
+-Runs O(sqr(n)) also but way faster than bubble sort.
+-For items in list, compare the right to current. To know who
+is bigger;For x in list, find out if right is bigger than current,
+if not move to nxt right and the last right was your current.
+
+Quick sort
+-chooses the pivot or most ave. item(not the smallest,not the
+tallest, just the mid value if they were sorted).It throws all
+the smaller element of the pivots to the left and bigger elements
+to the right. Then it goes to the left, choose new pivot, then
+throw at the left the smaller ones and at the right the bigger
+ones.
+-Runs O(sqr(n)) but alot faster than the 1st 2 sorting algos
+-ave run: O(n log n)
+-For items in list, look for the average, to find it, compare
+each to everyone via loop.
+
+
+
