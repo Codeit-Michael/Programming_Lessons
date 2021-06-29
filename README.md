@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @MichaelMaranan
 - 👀 I’m interested in Web Development
-- 🌱 I’m currently learning about Python Programming
+- 🌱 I’m currently learning about Python and Web Development Programming
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me marananm030@gmail.com
 
