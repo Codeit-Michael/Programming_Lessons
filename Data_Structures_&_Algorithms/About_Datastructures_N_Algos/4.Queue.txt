@@ -1,0 +1,34 @@
+"Queue"
+-also a subsequential access data structure
+-opposite of stack which has rules of FIFO (First in, First out)
+
+Ex: First in first out
+-instead of top & bottom at stacks, it has tail,mid n head
+-newer are on tails
+
+*Stack (queues are just like stacks)
+	-Push	-Pop	-Peek	-Contains
+
+Queue methods
+	-Enqueue = Enqueue(Object)
+
+	-Dequeue- empty: Dequeue(), it removes the 1st to last
+
+	-Peek- to access ascending
+
+	-Contains = Contain(Object) - to search
+
+Time Complexity equation
+
+Accessing & Searching O(n)
+-like the stack, it access files/ contents in linear
+-ex: you need the tail, so you need to dequeue all in its front
+
+
+Insert & Delete O(1)
+- just like the stack
+
+
+Queue example:
+-Job scheduling
+

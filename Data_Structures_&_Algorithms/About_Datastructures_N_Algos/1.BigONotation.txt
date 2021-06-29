@@ -1,0 +1,69 @@
+"Data structure Introduction"
+
+~Data Structure- to store, manage, organize infos and can easily access/modify
+ them
+
+~Data structures & algos == Backbone of codes
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Big O Notation
+-a way to basically score a data structure on 4 criterias
+-most common funcs you want for data structures
+*access elements
+*search element
+*insert element
+*delete element
+
+-you could make a data structure for based on their purpose, example, fast 
+inserting 'n deleting if you want it if that was their main purpose
+
+-Time complexity Equation- works by inserting a data set size as int 'n' then 
+return amount of the opts need to perform b4 func finished
+-this is used in worst case scenario
+
+-by measuring efficiency> based on opts performed, not by time
+
+-the speed of your code depends on how well it can perform access, search,
+ insert, delete
+
+
+
+
+~Measuring efficiency w/ Big O
+-6 most common time complexity equation (Most-Least efficient)
+
+1. constant algorithm (O(1) - O of 1)
+-no matter what size o your data is, the task will be completed in a single
+ step, even it is inserting,deleting,searching oropening.
+
+Ex: Your dataset(N)=100,but the operation required is only 1. Same as if your
+ dataset(N)= 1 or 1,000,000
+
+
+2. Logarithmic Algorithm (O(log n))
+-slower than constant, faster than linear
+-the more the dataset, the slower it works
+
+Ex: Binary search- sorted in order which is the bigger the volume, the more 
+time consuming ex: Dictionary app. Lets say your finding a word, the more 
+words it has means more time consuming to find that word you need
+
+
+3. Linear Algorithm (O(n) - O of n)
+-called linear bcoz it never create a curve on a graph, means Opt required is 
+always == to dataset(n)size:
+
+Ex: if your Dataset(N) = 1,000, the OPt required is also 1,000
+
+
+4. O n log n Algorithm (O(n log n))
+-as the volume increases, the the more operations required to use.
+-its diff. on Logarithmic is, when logarithmic increases dataset,he tries to
+ flatten the curve. On the other hand,O n log n, as the dataset increases, 
+the opt required is keep on increasing. Instead of flattening the curve like 
+the log, it keeps on increasing the opt needed.
+
+5-6. Polynomial Algorithm O((n)sqr) &
+~Exponential Algorithm O((2)raiseToN)
+-bot exponential in structure
+-bigger volume == getting worse

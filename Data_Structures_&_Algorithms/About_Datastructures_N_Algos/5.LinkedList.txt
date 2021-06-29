@@ -1,0 +1,80 @@
+"LinkedList"
+-Sequential access linear data structure
+-data can flow in & out smoothly, so you can insert or delete randomly
+-all its elemnts are separate called 'Node', which has 2 parts
+	-Data
+	-Refference/pointer(points the nxt Node in the list)
+
+-In linkedlist, instead of stacking, it's like in a linear form
+
+-Each linkedlist 'object' is 'individual'means they can have their own 
+multiple  attribute
+
+-its advantage on stacks & queues are linkedlists has pointers or links so we
+can shift to other objects without removing other file to move to the next one
+
+-Linkedlists are only moving forward and not backwards
+
+
+Linkedlist Structure
+
+ex1:
+linkedlists
+	Head node- top(Object called 'Nodes')
+		-Data 
+			-str,bool,int
+		-Refference/Pointers
+			-pointing the nxt Node in the linkedlist to form a chain
+	
+        Tail node- bottom(Object called 'Nodes')
+               -Data 
+                        -str,bool,int
+                -Refference/Pointers
+                        -pointing the nxt Node in the linkedlist to form a chain
+
+
+ex2:
+LinkLi=HeadNode(data)(pointer)-->TailNode(data)(pointer)-->null
+
+
+Add/Remove on Head,Mid & Tail Node
+-You need to link every node them based on the nxt node for them
+
+example:
+you had a Head,Middle,Tail. You want to append & rmv NEW on each of them
+
+Head Node
+-ADD:point NEW to the Head so it is the new head then NEW in the Head
+-RMV:point NEW to null so it is disconnected to anyone of them, so its exiled
+
+Mid Node
+-ADD:point the NEW to the Middle then point Head in the New
+-RMV:point the Head to the Middle then point NEW in  null, so its exiled
+
+Tail
+-ADD:point Tail to the NEW then point it in null
+-RMV:point Tail to the NEW
+
+
+Time Complexity Equations
+
+Accessing O(n)
+-because one node one opt
+-we cant just pass other objects coz they are chain so we cant use O(1)
+-to access Tail's data, we need to:
+-access the Head's data 1st, then its pointer and so on till u reach Tail.  
+
+Searching O(n)
+-it review every attribute then if its not, it just pass it then move to the nxt
+
+Inserting & Deleting O(n) or O(1)
+-to do this we must traverse to the place we want 
+-and then now we could proceed to the time complexity equation
+
+
+LinkedList example
+-making stacks,queues
+
+another one is a music playlist
+-when a song finished, it automatically move to the nxt
+

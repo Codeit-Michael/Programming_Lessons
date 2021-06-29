@@ -1,0 +1,53 @@
+"Arrays/Lists"
+-most common data structure 
+
+3 array attributes
+1. Name- array's name
+2. Type- str, int, float, etc.
+3. Size- cannot be changed unless rewrite
+
+ways in setting an array:
+~Put it's attributes while making the code
+~Put attributes inside it as the code goes by 
+
+-access arrays using index
+
+-2d lists/2d arrays- array/s inside array
+
+BIg O NOtation in Arrays
+
+Accessing O(1)- Constant
+-printing the array w/ the index of chosen content
+
+Searching O(n)- Linear
+-because most part, we're working w/ unsorted arrays
+
+Inserting & Deleting O(n)- Linear
+-in inserting, we need to shift contents to the right then append at the index
+-the same as deleting
+
+Pros:
+-can store similar contents
+-easy to understand, access and write
+
+Cons:
+-unchangeable size of array
+-low efficiency in inserting & deleting
+-use too much storage space
+
+arraylist- can grow;appendable
+
+variability for ArrayList
+add method	set/change method	get method
+remove method	clear method		toarray method- convert aryLi - li
+
+
+Arrays vs. Arraylist
+
+Arrays- good for small projects
+-fixed size	-stores any data types
+-methods need to create		-smaller memory based on arraylist
+
+Arraylist- for interactive codes/ programs
+-Dynamic size	-stores objects only
+-methods already created	-larger memory based on array

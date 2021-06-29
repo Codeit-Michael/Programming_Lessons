@@ -1,0 +1,50 @@
+"The Stack"
+
+Data Structure Types
+
+random access data structures vs. sequential access data structures
+
+Random access- access independently by index. Provides O(1) unlike sequential
+ex: using book to get the info you only need
+Random access ex: arrays, arraylist
+
+Sequential access- access in order.
+ex: tape measure. To access the 50 inches, you must past first the 1-49 inch
+sequential access ex: stacks, queues, linkedLists
+
+
+Stacks methods
+-Last in, First out (LIFO principle)
+
+Methods of stacks
+Push()
+-enter elements bottom to top
+
+Pop()
+-remove elements top to bottom
+
+Peek()
+-return elements at the top
+
+Contains()
+-searching w/o modifying anything
+-allows searching in process of taking objects as args then return a booleans
+-Contains(Object) Outout: True or False (Booleans)
+
+
+Time Complexity Equation
+
+Accessing -O(n)
+-ex: we had a stack of rocks and we need to get the bottom rock,
+-for every rock we need to remove or to pop (which is the datasets), we need an action for each rock(or the opt required)
+
+Searching O(n)
+-same as accessing
+
+Insert & delete O(1)
+-can be done in one process
+
+Ex: 
+-Stacks are like recursion(calling self repeatedly)
+-Undo/Redo
+-Back paging

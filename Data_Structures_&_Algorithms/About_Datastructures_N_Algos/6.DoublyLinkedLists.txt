@@ -1,0 +1,37 @@
+"Doubly Linked Lists"
+-same as linkedlists
+-only difference from LnLi is it could go forward/backward using pointers
+-to make this happen it has previos pointer to go backwards
+
+
+ex: we had head, mid n tail node
+-to make this happen, we need to the Head's prev pointer to null then its nxt
+ pointer to the mid's prev pointer and so on then the  Tail's nxt pointer to 
+the null
+
+
+Adding/Removing- we only program once and use infinite times
+ex: we had Head, Mid, Tail and we add n rmv NEW
+
+Add/Rmv Head
+-ADD: NEW's nxt to Head's prev and NEW's prev to null, then Head's prev to 
+NEW's nxt
+-RMV: NEW'S next to null, then Head's prev to null so it exciled
+
+Add/Rmv Mid
+-ADD: NEW's prev to Head's nxt and NEW's nxt to Mid's prev, then Head's nxt to
+NEW's prev and Mid's prev to NEW's nxt
+-RMV: Head's nxt to Mid's prev and Mid's prev to Head's nxt, then NEW's prev,
+then nxt to null
+
+Add/Rmv Tail
+ADD: Tail's nxt to NEW's prev and NEW's prev to Tail's nxt, then NEW's 
+nxt to null
+RMV: Tail's nxt to null then NEW's prev to null
+
+
+Time Complexity Equation (Same as the Linked Lists)
+
+
+uses of doubly linkedlists
+-Browser caches to go back n fort to websites with multiple objects on it

@@ -1,0 +1,54 @@
+"Graphs"
+
+-nonlinear Datastructure with vertices(nodes) and edges(arrows) also
+-finite set of vertices
+-vertices are not connected to edges means we can start from anywhere
+-it can have multiple branches
+
+*Vertices sets- each value separated by comma are the vertices (nodes)
+ex: {1,2,3,4,5,6}
+
+*Edge sets- its each element is an ordered pair describes their relationships
+(every node) like when your graphing on cartisian plane(x & axis).
+ ex: {(1,2),(1,3),(4,3),(5,4)}
+
+-adjacent- an edge connected onto 2 vertices. ex: (g)--(y)
+
+
+Directed & Undirected Graph
+
+Undirected Graphs (end up Cyclic)
+-direction you traverse isn't important
+-using this you could go back and fort to any places/Vertices as long as they
+ are connected to each other
+-both way relationship
+ex: Going through Bus routes & Train stations. As long as their roads has 
+connections to other stations, its not important where to start but they know
+ they need to go to other stations. You could go back n for to station A - B
+
+Directed Graphs (end up Acyclic)
+-direction you traverse is important
+-one way ralationship
+-indicated by arrows showing
+ex: Following a famous artist but he didn't follow you back
+
+
+Cyclic & Acyclic Graph
+
+Cyclic Graph
+-one which contains a path from atleast 1 back to itself
+
+Acyclic Graph
+-no path back to itself
+
+Weightened & Unweightened Graph
+-Cost- the distance of nodes which has numerical value in each edge
+- each weight represents some property of the info on you're trying to convey
+-A good weight = distance between nodes
+
+-Those specifications of graphs can be used together
+
+
+Unweightened cyclical Graph (Un/Directed ) used in follower system in most of 
+social medias
+ex: On soc med, you could follow or not follow ur followers

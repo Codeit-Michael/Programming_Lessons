@@ -1,0 +1,143 @@
+"Trees"
+-storing data on hierarchy method
+-looks like a linkedlist but its advanatage is it could link a node into a 
+multiple nodes
+-example: a family trees or an organzation from leader to lower staffs
+
+Tree Parts
+-Vertices: tree nodes
+-Edges: connections/links to other vertices
+
+-Root Node: Topmost node/Vertice
+-Child Node: a vertice that has connection to parent node
+-Parent Node: the one that has child 1 or more
+-Leaf Node: Childless Node
+
+Tree Property
+Height: how many edges to reach to farthest leaf
+
+Node Property
+Depth: how many vertices does required to pass just to reach a vertice starting
+at the root node
+
+-Tip: Trees are better with setting up restrictions
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Diff types of Trees
+~~~~~~~~~~~
+
+*Binary Tree (Has 3 restrictions to keep data organized)
+-can have only 2 children
+-for any given parent node, the child to the left must less than the parent
+ and the child at the right must be greater than the Parent
+-No 2 Nodes can contain the same value
+        (50)
+        /  \
+      (25)(75)
+
+Advantages in using Binary Tree
+-we could search trough them using Logarithnic Time
+-to do this, we must go to left if were searching for a value which is less than
+ the parent and right if greater than the parent
+-it could store searchable large data quantities 
+-also translates Access,Insert and Delete
+
+
+~~~~~~~~~~~
+
+*Trie/s (Also called Digital Trees n Prefix Trees- Only used in some situations)
+-it stores letters in form of characters
+-we can form word using this by traversing down the sequence of letter
+        ( )		( )
+	 |		/ \
+       ( h)	      (h) (d)
+       /   \	  
+   (. he) (hi)
+	     \
+	 (. hihebb)
+
+flagging- marking the word to tell the computer it is the end. Lets say the 
+'flagging/marking' is the '.'
+ 
+Where you could use this shit?
+-auto complete search for typing
+-IOS/Google docs stores the whole English dictionary 
+-it always recommend the 95% most used word
+-when you misspelled, it underlines the proper spelling so you could see where
+ you did wrong
+
+
+~~~~~~~~~~
+
+"Heaps"
+-a tree that could be less than or greater than
+-determines where data is stored
+-usually dependent on the Parent's node value
+
+-it has 2 kinds:
+*Min Heap: the parent node is less than his child nodes,Root node == minimum
+        (2)
+        / \
+      (3) (4)
+      /     \
+    (5)     (7)
+-If wrong, try to swap nodes if possible
+
+
+*Max Heap: the parent is greater than his child nodes,Root node == maximum
+        (9)
+        / \
+      (8) (7)
+      /     \
+    (4)     (1)
+
+
+Appending:
+Max Heap
+-If wrong, try to swap nodes if possible
+     1. (70)         2. (90)
+        /  \	        /  \
+      (4)  (90)	      (4)  (70)
+      /    /  \       /    /  \
+    (2)   (3) (4)    (2)  (3) (4) 
+
+Deleting:
+Max Heap
+1. Remove the root node
+     1. (70)         2. (  )
+        /  \            /  \
+      (4)  (90)       (4)  (70)
+      /    /  \       /    /  \
+    (2)   (3) (4)    (2)  (3) (4)
+
+
+2. Replace it with the furthest from to the right
+     1. (  )         2. (4)
+        /  \            /  \
+      (4)  (70)       (4)  (70)
+      /    /  \       /    /  \
+    (2)   (3) (4)    (2)  (3) ( )
+
+3. Heapify the heap by comparing parent node's to their children & swapping
+ if necessary
+     1. (4)          2. (70)
+        /  \            /  \
+      (4)  (70)       (4)  (4)
+      /     /         /    /  
+    (2)   (3)       (2)  (3) 
+-Reverse these methods if you're using Min Heaps
+
+why Heap? Heaps are most useful in the implementaion of 'HeapSort' 
+-HeapSort is a sorting algo which takes in a list of elements, builds them
+ into max/min heap, then 'removes' the root node continously to make a 
+sorted list
+
+Heap Implementation/Application
+*Priority Queues- advance data structure on your computer uses to desginate
+ tasks and assign comp.power based on how urgent matter is
+
+-IN OTHER WORDS: use to sort things in order based on how important they are
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
