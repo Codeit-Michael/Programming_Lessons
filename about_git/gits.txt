@@ -1,0 +1,67 @@
+# About the user
+*git config --global user.name "Michael Maranan"
+*git config --global user.email michaelmaranan@gmail.com
+
+*git config --global core.editor "code --wait" (means wait untill done)
+*git config --global -e (open your current editor)
+*git config --global core.autocrlf input (it only modify end lines when storing
+codes to repositories)
+
+*git config --help ,git config -h documentation
+
+# Initializing /making a repository
+*go ahead on your chosen location on your computer
+*git init (mkdir, if you ls,nothing will show. But if ls -a, it'll show '.git')
+*rm -rf .git(to delete repository)
+##snapshot taking example
+*git add file1 file2(send snapshot to staging area)
+*git commit -m "(Initial commit-description)" (saving snapshot to repository,not
+means staging area is empty,it still contains last items)
+*lets say file2 is erased from the original, but still in staging area like what
+we say b4. To remove, try git add file2. It'll see it has no file2 so its going
+to remove it
+
+# Staging files
+*git status (show activities, if files == red: they are not in staging area)
+*ADDING - git add {file/s: file1 file2,*txt/(any file type), or . means evrtg}
+--if you run git status again, you'll see added files turns to green means they're
+in the staging area
+
+-if we modify an added file again via:echo world >> file1.txt, it is diff on what
+we push, so to update just repeat the git add file1.txt
+
+# Committing changes
+*git commit -m "{description}." or just git commit - (directs you to edit them better)
+*then save it and as if you go back at the terminal it shows your commit process
+
+# Committing practices
+-when? for bug fix or for typo
+-Why/what is it all about? make it descriptive(HINT: you can use its present/
+past tense like fix and fixed)
+
+# Skipping the stage area
+*git add -a -m/-am "{Description}" -the -a means append everything
+
+# Removing files
+-lets say you delet the file2.txt, but its copy is still in staging area (see it
+in git ls-files)
+*to remove it there,git add file2.txt
+*then declare it to the commit area by: git commit -m "deleted unusuals"
+*1 operation removal git rm file/s,*type,.
+
+# Renaming or moving files
+*git mv file1.txt file1.js, then commit it : git commit -m "{dsc}"
+
+# Ignoring files (for private logs if you're in a team)
+*mkdir .gitignore, next pass your personal dir or what
+*then git add the .gitignore and commit it
+*git rm --cached -r {file} (for removing only at the git folder, not in whole
+place) then commit it
+
+# Short status
+*git status -s
+--red means not saved,?? means not in staging area
+
+# Viewing staged and unstaged changes
+*git diff --staged
+
