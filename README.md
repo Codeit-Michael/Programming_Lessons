@@ -7,7 +7,7 @@
 Hey there Humans,
 I'm Michael Maranan and I'm interseted about programming with python
 and I am still learning about programming. I wish someday I will became
-a web develpoer or any job related about programming.
+a web develpoer or get any job related about programming.
 
 <!---
 MichaelMaranan/MichaelMaranan is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
