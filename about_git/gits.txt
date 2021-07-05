@@ -65,3 +65,28 @@ place) then commit it
 # Viewing staged and unstaged changes
 *git diff --staged
 
+# Visual diff tools
+*git config --global diff.tool "Sublime Text"
+*git config --global difftool."Sublime Text".Terminal "code --wait --diff $LOCAL $REMOTE"
+
+# History viewing
+*git log, {spc} to nxt page
+*git log --oneline -shorter history showing (w/ --reverse - first to last)
+
+# View commits
+*git show {characters given at history view, ex: d601b90, maybe only d601 if its
+commit was not repeated}- show contents
+*other ex: git show HEAD~1:file1.js
+*git ls-tree HEAD~1 (show all commit)
+
+# Unstaging files (undo files from staging area)
+*git restore --staged {file/s}
+
+# Discarding local changes
+*git clean -h (for more info)
+*git clean fd (foce erase evrtg)
+
+# Restore files in earlier version
+*lets delete file1.js first in git- git rm first1.js then commit
+*git restore -h
+*git restore --source=HEAD~1 file1.js
