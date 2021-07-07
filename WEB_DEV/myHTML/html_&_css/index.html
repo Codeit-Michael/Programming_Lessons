@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- meta tags are the tags where you put everything about details on your website. This could also help your site to rank on when you googled some words related to it -->
+        <meta charset='UTF-8' />
+        <meta name='description' content='HTML with CSS' />
+        <meta name='author' content='Michael Maranan'/>
+        <meta name='keywords' content='HTML and CSS for beginners, basic HTML and CSS'/>
+        <!-- " meta name='viewport' content='width=device-width, initial-scale=1,0' " - One of the most important element because it is size or measurement of your website base on every device's screen size -->
+        <meta name='viewport' content='width=device-width, inital-scale=1.0'/>
+        <title>Michael</title>
+
+    </head>
+    <!-- <h1>Styles and colors</h1> -->
+    <!-- to size, font-size:#px (px for pixels which is based on your device);
+         to add borders, border: 1px solid black, add width or height=#px (or%)
+          to resize it and add max-width:#px to give it limitations in extending
+           the borders. For more information about css attributes for styles, color pallets, etc.,
+            go to w3school.com-->
+
+<!-- in picking colors, instead of using names, you could also use hex value, rgb or hsl -->
+
+    <body style='color:#414473;font-size:20px'>
+        <header>
+            <h1><b><i>CSS Tutorial</i></b></h1><hr>
+        </header>
+
+        <!-- <main style='color:#a7a8b0;border:3px solid green;width:80%;max-width:500px'>
+                <p>hey  heyy    heeyy   hheeyy</p>
+                <hr><br>
+        </main> -->
+
+        <main>
+            <h1><b>Paddings & Margins</b></h1>
+            <!-- PADDINGS AND MARGINS can add attributes like -top, -bottom, -left, -right. Example, style='margin:50px 25px 50px 25px' -->
+            <div style='padding:50px;background-color:rgb(9, 9, 10)'>paddings- extra space inside, magins- extra space for outside</div>
+            <div style='margin:50px;background-color:rgb(2, 2, 100)'>paddings- extra space inside, magins- extra space for outside</div>
+            
+        </main>
+
+        <main>
+            <h1><b>Floats and displays</b></h1>
+            <!--float is a style attribute used to send some parts of your website to left or right-->
+            <!-- display is also a style attribute that allows you to make something in that tag. Example: <li sy=tyle='display:inline'> for making the list align -->
+            <ul style='float:left;background-color:orange;color:blue;font-size:25px'>
+                <caption>Basic screen colors</caption>
+                <li>red</li>
+                <li>green</li>
+                <li>blue</li>
+            </ul>
+            <p style='font-size:35px'>These are the basic colors to mix and creat new colors. If you look closer on the devices with screen like tv, monitor, etc., you would notice these three basic colors. First off, fuck you bitch when you click your claim, Westside when we ride we do click the game! You claim to be a player but i fuck your wife, we bust on bad boys nigga thug for life!</p>
+
+            <a href='http://www.vetstreet.com/dogs/rottweiler' target='blank'><img src='https://vetstreet.brightspotcdn.com/dims4/default/016b763/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fde%2F7def60a7fb11e0a0d50050568d634f%2Ffile%2FRottweiler-5-645mk062811.jpg' 
+            style='float:left' width='160' height='250' alt='dog'/></a>
+            <p style='font-size:35px'>This picture of rottweiler dog shows his friendly looks while hanging out with other friendly dogs</p><br><br><br><br><br><hr>
+        </main>
+
+        <main>
+            <h1><b>Positining: Static, Relative, Absolute, Fixed</b></h1>
+            <!-- Static is the default; relative is moved based on its orig position; absolute is moving toward its closest family; and fixed was always on the screen wether you scroll its page -->
+    
+            <div style="position:relative;top:10px;bottom:10px;width:90px;height:90px;background-color:blue;"></div>
+            <div style="width:100px;height:100px;background-color:red;"></div><br><br><br><br><br><hr>
+        </main>
+
+        <main>
+            <h1><b>Opacity, Shadow and Radius</b></h1>
+            <!-- Opacity attribute could make the content on a tag transparent base on your set up. Example: opacity:(opacity level)px... -->
+            <!-- Text shadow's value was on it's name. Example: text-shadow:(horizontal)px (vertical)px (blur)px (color) -->
+            <!-- Box shadow is also the same as text shadow even how to use it exept its name -->
+            <!-- border Radius attribute could make your image circular based on pixel or %. Example:radius:5px -->
+
+
+            <h1 style="text-shadow: 2px 2px 2px red; position: relative;top:125px;left:30px"> ALPHA WOLF MENTALITY</h1>
+
+            <img style="opacity:0.3;border-radius: 20px;" src="https://image.freepik.com/free-vector/wolf-head-esport-mascot-logo_160921-180.jpg" alt="Wolf" /><br><br><br><br><br><hr>
+        </main>
+            
+        <main>
+            <h1><b>Fonts & Texts</b></h1>
+            <!-- em(em) can use in font sizing of your fonts because it means the default size. recommended size- 1em -->
+            <!-- To change the font of your website content, put: style="font-family:'chosen font name'" or style="font-family:'chosen font name, another font, any other font'" if the web doesn't have any font like that -->
+
+
+            <p style="font-size:2em;font-family: 'Ariel Black', Gadget, sans-seri;font-style: italic;font-variant: small-caps;font-weight: bold;">other attributes are font style, font variant for caps, font weight for its volume</p><br><br><br><br><br><hr>
+
+        </main>
+
+        <main>
+            <h1><b>Style tag</b></h1>
+            <!-- Style tags was place on the head tag allows you to style a tag / specific part of your website just specify them. But since this is an example, I'll go place this here bellow -->
+            <style> article {color:blue;} h2 {color:green;}</style>
+
+            <h2>My website</h2>
+            <article>Did you know that I'm riding this horse backwards</article><br><br><br><br><br><hr>
+        </main>
+
+        <main>
+            <h1><b>External style sheets</b></h1>
+            <!-- separating the css from html, place on the head tag, but as an example I'll go place i here bellow -->
+            <link rel='stylesheet' href='style.css'/>
+
+            <h3>MIND OF A HUSTLER, HEART OF A KING</h3><br><br><br><br><br><hr>
+        </main>
+
+        <main>
+            <h1><b>Class and Id</b></h1>
+            <!-- Id only applies changes to those specific tags with the same Id. While Class applies changes to all of those given tags. Tags can only had single Id while in class, a tag can have a multiple class -->
+
+            <h1 id="my-id">Classes and Id's are different</h1>
+            <article class="fancy-border">
+                <p class="blue-text"> Classes and ID's are awesome!</p>
+            </article><br><br><br><br><br><hr>
+
+        </main>
+
+        <main><h1><b>CSS Selector</b></h1>
+        <!-- CSS selector allows you to clasify what tag was the will be applied of the operation -->
+        <!-- put * in th beginning of stylings instead of tag to select all elements/tags -->
+        <!-- you can apply it in diff. tags using this in css:ex. h1, h2{attribute:specs} -->
+        <!-- select the list using: ul > li{attribute:specs} -->
+        <!-- selct different tags using: tag, another_tag{attribute:spec} -->
+        <!-- for selecting title: [title='lemon(href can do also)'] -->
+        <!-- for selecting membership: [title*='lem'] -->
+        <!-- for more info, head to w3school.com --></main>
+
+        <main><h1><b>Flexbox</b></h1>
+            <!-- classes 'box', 'box2' and 'container' (not shown) are used for styling the elements -->
+            <!-- this code down there has some errors not yet fix so it's not that accurate -->
+            <div class="flex-container container">
+                 <div class="box flex-item"><h1>1</h1></div>
+                 <div class="box2 flex-item"><h1>2</h1></div>
+                 <div class="box flex-item"><h1>3</h1></div>
+                 <div style="align-self:center;" class="box"><h1>4</h1></div>
+                 <div class="box flex-item"><h1>5</h1></div>
+            </div><br><br><br><br><br><hr>
+
+        </main>
+
+        <main>
+            <div class='box-animation animation'>
+                <div><h1>HELLO WORLD</h1></div>
+                <div><h1>HI USER</h1></div>
+                <div><h1>WELCOME FOLKS</h1></div>
+            </div>
+        </main><br><br><br><br><br><hr>
+
+        <main>
+            <h1><b>Importing Files</b></h1>
+            <!-- to import files -->
+            <!-- @import "file.css" -->
+        </main><br><br><br><br><br><hr>
+
+        <!-- Browser support in weshcool could help you to know if your browser supports your chosen style -->
+
+        <!-- CSS Framework: just head to internet for more information -->
+
+    </body>
+</html>
