@@ -1,0 +1,54 @@
+/*for External style sheets*/
+h3{color:red;}
+
+/*for Class and Id*/
+/*this is for the ID*/
+#my-id {color:blue;}
+
+/*this is for the Classes*/
+.fancy-border {border: 3px dashed red;}
+.blue-text {color:blue;}
+
+/*For Flexbox*/
+/*
+display - to make it a flexbox; 
+flex-direction - deals with rows(-reverse or not) or column(-reverse or not)
+justify-content - place of the flexbox (example: flex-end, center, space-between)
+flex-wrap - allows your flex box to not shrink as it's page size minimizes (example: wrap reverse)
+
+*/
+.flex-container {color:blue;background-color:red;}
+.flex-container {
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     align-items: center;
+     align-content: space-between;
+}
+
+/*Animations*/
+#agg{background-color:green;}
+.box-anijmation{}
+
+
+@keyframes change-color {
+     from {background-color: salmon;}
+     to {background-color: lightblue;}
+}
+
+@keyframes change-color1 {
+     0% {background—color: red;}
+     15% {background—color: orange; top:10px; left:10px;}
+     30% {background—color: yellow; top:20px; left:20px;}
+     45% {background—color: green; top:30px; left:30px;}
+     70% {background—color: blue; top:40px; left:40px;}
+     100% {background—color: purple; top:50px; left:50;}
+}
+
+.box-animation{
+     animation-name: change-color;
+     animation-duration: 2s;
+     animation-delay: 2s;
+     animation-iteration-count: 2;
+}
