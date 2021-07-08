@@ -15,6 +15,7 @@ def add_time(base_time,duration,day = None):
 	while right_main >= 60:
 		right_main -= 60
 		left_main += 1
+	if len(str(right_main)) == 1: right_main = f'0{right_main}'
 
 	while left_main >= 12:
 		if add_day >= 24:
@@ -25,6 +26,11 @@ def add_time(base_time,duration,day = None):
 		Base = ampm_selector
 		if Base == 'AM':
 			next_days += 1
+	if len(str(left_main)) == 1:
+		if left_main == 0:
+			left_main = 12
+		else:
+			left_main = f'0{left_main}'
 
 	new_time = f'{left_main}:{right_main} {Base}'
 
@@ -36,6 +42,6 @@ def add_time(base_time,duration,day = None):
 		new_time += f', {weekdays[new_index]}'
 	return new_time
 
-
-print(add_time("11:43 PM", "24:20", "Tuesday"))
-print(add_time("6:30 PM", "205:12"))
+if __name__ == '__main__':
+	print(add_time("11:43 PM", "24:20", "Tuesday"))
+	print(add_time("6:30 PM", "205:12"))
