@@ -58,6 +58,8 @@ var sum = 3 + 7;
 // accessing different data: also varname[0]
 // last objects varname[varname.length-1]
 
+// Multiple quotes in javascript: ` `
+// In quote ` `, you can also insert codes that works
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Arrays-[] (just like python arrays). Also access by indexes
 /* Array methods
