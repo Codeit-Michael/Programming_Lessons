@@ -1,0 +1,11 @@
+# Making django projects
+1. Select or create a directory. EX: "storefront" folder
+2. Type "pipenv install django" to make a virtual environment. You can see
+the location at virtualenv location. EX: Virtualenv location: /home/michael/.local/share/virtualenvs/storefront-SZgUppvg
+3. Head to the directory and type "pipenv shell" to activate the virtualenv.
+4. Type "django-admin startproject {dir name}" to start a new project. But
+it creates multiple directory. Instead lets use "django admin {dir name} ."
+so it uses the current dir. Use "django-admin" only to see the commands.
+5. A file called manage.py nxt to your project is its the wrapper. You can run
+it through that file.EX: "python manage.py runserver" gives you a URL/Link that
+connects you to your project.
