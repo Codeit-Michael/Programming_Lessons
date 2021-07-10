@@ -1,0 +1,16 @@
+What is Django?
+- is a python fullstack framework for making websites
+
+- some Django features
+* Admin site
+* Object Relational Mapper (ORM)
+* Authentication
+* Caching 
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- How the web works
+* URL(Uniform Resource Locator)- after clicking it, it sends an http request
+(hypertext transfer protocol request) to the server. As a response, the server
+sends you a http response (maybe html and/or data).
+
+--ADDITIONAL(install pipenv to prevent file crash)
