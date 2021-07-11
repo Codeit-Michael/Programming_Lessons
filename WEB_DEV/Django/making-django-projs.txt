@@ -1,0 +1,33 @@
+# Making Simple django projects
+1. Select or create a directory. EX: "storefront" folder
+2. Type "pipenv install django" to make a virtual environment. You can see
+the location at virtualenv location. EX: Virtualenv location: /home/michael/.local/share/virtualenvs/storefront-SZgUppvg
+3. Head to the directory and type "pipenv shell" to activate the virtualenv.
+4. Go back to the orig dir and type "django-admin startproject {dir name}" to start a new project. But
+it creates multiple directory. Instead lets use "django admin startproject {dir name} ."
+(ADDITIONAL: If you exit it and later want to get back, cd again to the dir)
+so it uses the current dir. Use "django-admin" only to see the commands.
+5. A file called manage.py nxt to your project is its the wrapper. You can run
+it through that file.EX: "python manage.py runserver" gives you a URL/Link that
+connects you to your project and ctrl-C to stop the command.
+
+# Using Integrated Terminal in vscode (place where you can run,etc. your V.E.)
+1. Get the link through "pipenv --venv"
+2. Open the command pallette at the view, select "python:select interpreter".
+Choose the "enter interpreter path" then type "{link}/bin/python"
+3. Run the Integrated terminal by ctrl-shift-`
+ADDITIONAL: if the execute command returns invalid syntax, just make a new
+terminal. If it has "source" then you can try again and it may work this time.
+
+# Making Django apps
+1. Head to the dir storefront, type "python manage.py startapp {name(lets say its name is playground)}"
+2. Then, list its name at storefront/settings.py/INSTALLED_APPS
+
+# Writing Views (http request-resopnse)
+1. Create your request-response at the dir playground/views.py
+
+# Mapping URLs to Views
+1. Make urls.py in dir playground & import views and path from django.urls
+2. Make a urlpatterns list for URL configurations to know wwhat does it access
+3. Head to storefront/urls.py. At the example, we follow the instructions for
+the URLConf rules beceause it is what we needed
