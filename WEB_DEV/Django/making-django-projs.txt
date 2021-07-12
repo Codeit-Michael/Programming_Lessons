@@ -17,7 +17,8 @@ connects you to your project and ctrl-C to stop the command.
 Choose the "enter interpreter path" then type "{link}/bin/python"
 3. Run the Integrated terminal by ctrl-shift-`
 ADDITIONAL: if the execute command returns invalid syntax, just make a new
-terminal. If it has "source" then you can try again and it may work this time.
+terminal.
+4. To know if it works, it has "source" at the beginning and has a activate at the end.
 
 # Making Django apps
 1. Head to the dir storefront, type "python manage.py startapp {name(lets say its name is playground)}"
@@ -31,3 +32,32 @@ terminal. If it has "source" then you can try again and it may work this time.
 2. Make a urlpatterns list for URL configurations to know wwhat does it access
 3. Head to storefront/urls.py. At the example, we follow the instructions for
 the URLConf rules beceause it is what we needed
+
+# Using templates (shows how to make django templates and how it works)
+Ex:
+1. Make a templates dir at app dir (playground) and your template (HTML,CSS
+,JS) but lets just use index.html.
+2. Head to the views.py and make a function that returns your template.
+Ex; def temp(request): return render(request,'index.html'). If render is not
+already imported from django.shortcuts, then return it.
+3. You can also add logic,etc.
+
+# Debugging django 
+Using vscode
+- At the left corner of vscode, theres a play button w/ bug drawing. It is
+the run & debug button, where you can debug any of those in choices, aynway
+lets pick the django. You can found lanuch.json at .vscode dir. In py files,
+if you press the red dots at the left most of each line which gives you a
+breakpoint where you can run the code until the breaking point.
+
+Django debug toolbar
+1. On your integrated terminal, "python -m pip install django-debug-toolbar"
+then add "debug_toolbar" at the installed apps.
+2. At the urls.py/urlspattern list inside the django project folder (in our
+example, we have storefront), import debug_toolbar and add 
+path('__debug__/',include(debug_toolbar.urls)).
+3. Add 'debug_toolbar.middleware.DebugToolbarMiddleware', at the middleware 
+list's top.
+4. Add the whwole internal ips list in anywhere at the settings.py because
+it doesn't exist there.
+You can see its whole steps in django debug toolbar website/INSTALLATION.
