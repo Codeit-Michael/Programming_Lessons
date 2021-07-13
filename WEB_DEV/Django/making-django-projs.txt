@@ -61,3 +61,14 @@ list's top.
 4. Add the whwole internal ips list in anywhere at the settings.py because
 it doesn't exist there.
 You can see its whole steps in django debug toolbar website/INSTALLATION.
+
+# Data Modeling
+In making apps, broke them into small parts and if possible, build them 
+into small particular app.
+
+Monolith- must be all install/ed and update/d at the same time. In some 
+cases, you might encounter independent apps where they must be independent
+for all of the time like the tagging apps/methods.
+
+Methods like these must be self-contained and zero coupling(no connections
+to other apps/methods).
