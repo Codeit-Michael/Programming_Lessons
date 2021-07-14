@@ -1,16 +1,58 @@
 What is Django?
-- is a python fullstack framework for making websites
+-is a python fullstack framework for making websites
 
-- some Django features
+-some Django features
 * Admin site
 * Object Relational Mapper (ORM)
 * Authentication
 * Caching 
 
+-Using python manage.py runserver will give you django server(Python lightweight
+server so you don't need to problem Apache while under development). Use this
+server only while your app is under development. If you want to change IP adress
+just do the ff: python manage.py runserver {4 digit chosen IP adress}
+
+-Difference of Project and App
+A project is a collection of configuration and apps for a particular website. An
+app is does the work. A project can contain multiple apps. An app can be in
+multiple projects.
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- How the web works
+-How the web works
 * URL(Uniform Resource Locator)- after clicking it, it sends an http request
 (hypertext transfer protocol request) to the server. As a response, the server
 sends you a http response (maybe html and/or data).
 
---ADDITIONAL(install pipenv to prevent file crash)
+--ADDITIONAL(install pipenv to prevent file crash; makes a virtual environment)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Different parts of django project
+*Outside the project package folder
+- manage.py - lets you interact with your project package. Lets say your package
+project interacts with your django app.
+
+* Inside the project package folder
+-__init__.py: empty file that tells Python that this directory should be
+considered a Python package
+-settings.py: Settings/configuration for this Django project
+-urls.py: The URL declarations for this Django project; a “table of contents” of
+your Django-powered site
+-asgi.py: Asynchronous Server Gateway Interface-compatible web servers to serve
+your project
+-wsgi.py: WebSGI-compatible web servers to serve your project
+
+### Making projects and apps are in making-django-projs.txt ###
+
+
+# Using Django apps
+-views.py - must return templates. Need to be map it to URLs using URLConf in
+separate file. Make a urls.py inside the app folder where you put URL for views.
+
+-Next add the ff in django project/urls.py: 
+from django.urls import path,include
+
+urlpatterns = [
+    path('{chosen url; maybe name}/', include('{app name}.urls')),
+]
+
