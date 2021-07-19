@@ -140,3 +140,33 @@ Ex: t.items_set.create(text='Finish django',complete=False)
 
 4.9. If you already exit the iPython and you want to access the db inside it,
 just import what we import before again to access this db.
+
+*Working to show this datas in a webpage
+
+1. Lets edit the urlpatterns at main/urls.py to looks like this:
+	urlpatterns = [path("<int:id>", views.index, name = "index")]
+
+2. Then at the views.py: from .models import todolist,items
+
+3. The "<int:id>" means it needs an int which is an id for an items/todolist.
+
+4. Lets also modify index()
+def index(response, id):
+	ls  = todolist.objects.get(id = id)
+	itm = ls.items_set.get(id = 1)
+	return HttpResponse('<h1>%s</h1></br><p>%s</p>' % ls.name,itm.text)
+
+ADDITIONAL; If you want to search something in your db, try:
+todolist.objects.filter(name__startwith='{str}')
+
+5. Admin dashboard
+5.1. Run 'python3 manage.py createsuperuser' then sign up there
+
+5.2. Next, go to your admin page through {link}/admin/ and log in there.
+You can see there all the objects registered.
+
+5.3. To register a model and its data;
+	-Go to admin.py at app folder then, import a model
+		-Ex: from .models import todolist
+	-To register: admin.site.register({model})
+		-Ex: admin.site.register(todolist)
