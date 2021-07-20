@@ -65,14 +65,14 @@ contain.
 3.1. Django apps can be use in different django projects just make sure they
 are listed on INSTALLED_APPS at inner django project folder/settings.py.
 
-- Run the code; "python3 manage.py makemigrations polls" to declare
+- Run the code; "python3 manage.py makemigrations main" to declare
 to django that you make some changes on your models (also your database
 schema) and you want to save the changes on disk(through migration).
 
-3.2. polls/migrations/0001_initial.py saves the migrations that happened.
+3.2. main/migrations/0001_initial.py saves the migrations that happened.
 They are editable, incase you want to modify something
 
-3.3. command "python3 manage.py sqlmigration polls 0001": takes migration
+3.3. command "python3 manage.py sqlmigration main 0001": takes migration
 names and returns their SQL
 
 Note the following:
@@ -112,8 +112,7 @@ without making migrations or touching the database.
 - 'python manage.py makemigrations' to create migrations for those changes
 - 'python manage.py migrate' to apply those changes to the database.
 
-* Migrations are very powerful and let you change your models over time, as
-you develop your project, without the need to delete your database or tables
+* Migrations are very powerful and let you change your models over time, as you develop your project, without the need to delete your database or tables
 and make new ones - it specializes in upgrading your database live, without
 losing data.
 
@@ -135,7 +134,8 @@ t = ToDoList(name="Michael's Studies"). To save it, simply add: t.save().
 format: t.{relative class name}_set.all()
 ex: t.items_set.all()
 
-4.8. To add items in ToDoList at t, you must use t.items_set.create(follow the patterns(give what the instances onfo they need)).
+4.8. To add items in todolist at t, you must use t.items_set.create(follow the patterns(give 
+what the instances onto they need)).
 Ex: t.items_set.create(text='Finish django',complete=False)
 
 4.9. If you already exit the iPython and you want to access the db inside it,
@@ -151,10 +151,10 @@ just import what we import before again to access this db.
 3. The "<int:id>" means it needs an int which is an id for an items/todolist.
 
 4. Lets also modify index()
-def index(response, id):
-	ls  = todolist.objects.get(id = id)
-	itm = ls.items_set.get(id = 1)
-	return HttpResponse('<h1>%s</h1></br><p>%s</p>' % ls.name,itm.text)
+	def index(response, id):
+		ls  = todolist.objects.get(id = id)
+		itm = ls.items_set.get(id = 1)
+		return HttpResponse('<h1>%s</h1></br><p>%s</p>' % ls.name,itm.text)
 
 ADDITIONAL; If you want to search something in your db, try:
 todolist.objects.filter(name__startwith='{str}')
@@ -170,3 +170,41 @@ You can see there all the objects registered.
 		-Ex: from .models import todolist
 	-To register: admin.site.register({model})
 		-Ex: admin.site.register(todolist)
+
+6. Customizing Templates
+6.1. Create a templates dir inside the main dir, then inside templates create
+main dir. Should looks like this: mysite/main/templates/main/
+
+6.2. Create a 2 different pages; base.html and home.html
+	- make a page at base.html then import it in home.html
+
+	- WHY SEPARATE?! Because it is for all of the users. It gives a user
+	a starting/home page independently so you dont need to code it all for
+	your users individually.
+	-base.html example texts:
+			<!DOCTYPE html>
+			<html>
+			<head>
+				<title>Todo Fucking List</title>
+			</head>
+			<body>
+				<h1>Title</h1>
+				<p>paragraph</p>
+			</body>
+			</html>
+
+6.3. Showing objects in Browser
+-Add this in main/urls.py/urlpatterns: path("", views.home, name = "home")
+
+-Remove the </p> and change the </h1> to => <h1>{{name}}</h1>. Remember,
+{{name}} is a variable
+
+-Write this code in your main/views.py:
+	def index(response,id):
+		cnt = todolist.objects.get(id = id)
+		return render(response,'main/base.html',{'name':cnt.name})
+
+	def home(response):
+		return render(response,'main/home.html',{'name':'test'})
+--this means if you had id in link, it returns the list.name, else returns
+  the word test
