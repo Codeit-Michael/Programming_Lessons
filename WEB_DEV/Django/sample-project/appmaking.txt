@@ -208,6 +208,8 @@ main dir. Should looks like this: mysite/main/templates/main/
 		return render(response,'main/home.html',{'name':'test'})
 --this means if you had id in link, it returns the list.name, else returns
   the word test
+
+
 6.4. Showing objects with its item in Browser
 6.4.1. Modify the base.html:
 	<!DOCTYPE html>
