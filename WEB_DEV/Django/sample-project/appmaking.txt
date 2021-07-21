@@ -208,3 +208,63 @@ main dir. Should looks like this: mysite/main/templates/main/
 		return render(response,'main/home.html',{'name':'test'})
 --this means if you had id in link, it returns the list.name, else returns
   the word test
+6.4. Showing objects with its item in Browser
+6.4.1. Modify the base.html:
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<!-- using blocks:allows us to insert/modify all of inside of it when
+		modifying it from other file just make sure put blocks & insert thing
+		on its middle -->
+		<title>{% block title %}Todo Fucking List{% endblock %}</title>
+	</head>
+	<body>
+		<div id='content',name='content'>
+			{% block content %}
+			{% endblock %}
+		</div>
+
+	</body>
+	</html>
+
+-{blocks} - to modify that part in some cases
+
+
+6.4.2. Modify the views.py:
+	from .models import todolist,items
+
+	def index(response,id):
+		cnt = todolist.objects.get(id = id)
+		return render(response,'main/list.html',{'cnt':cnt})
+
+	def home(response):
+		return render(response,'main/home.html',{})
+
+-@ index(), we get the id as an input. We access what that id contains and we
+return its value
+
+
+6.4.3. Create and modify the list.html
+	<!-- Import -->
+	{% extends 'main/base.html' %}
+
+	{% block content %}
+	<!-- It get the name of the object that we get from the index() in no.2 -->
+	<h1>{{cnt.name}}</h1>
+
+	<!-- making lists, <li> for list items -->
+	<ul>
+		<!-- a python code were it get all the items inside that object -->
+		{% for items in cnt.items_set.all %}
+			<!--asks if the task is complete or not - get the complete instance-->
+			{% if items.complete == True %}
+				<!-- return all the items using this -->			
+				<li>{{items.text}} - COMPLETE</li>
+			{% else %}
+				<li>{{items.text}} - INCOMPLETE</li>
+			{% endif %} <!-- ends if statement here -->
+		{% endfor %} <!-- ends the loop here -->
+	</ul>
+
+	{% endblock %}
+
