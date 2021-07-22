@@ -270,6 +270,7 @@ return its value
 
 	{% endblock %}
 
+
 7. Making Simple Forms
 2 ways in getting db info:
 -post >> private. Ex:getting password/modifying datas
