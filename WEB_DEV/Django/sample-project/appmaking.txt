@@ -270,3 +270,44 @@ return its value
 
 	{% endblock %}
 
+7. Making Simple Forms
+2 ways in getting db info:
+-post >> private. Ex:getting password/modifying datas
+-get >> access what the link you passed contain
+
+7.1 Make a path at urlpatterns.
+Ex: path("create/", views.create,name="create"),
+
+7.2. At mysite/main/, create and modify the forms.py:
+	from django import forms
+
+	# Main back bone of the form
+	"""
+	Django automatically write a js code to render this in browser when its 
+	passed inside the form tag
+	"""
+	class createnewlist(forms.Form):
+		name = forms.CharField(label='Name',max_length=200)
+		check = forms.BooleanField(required=False)
+
+## Understanding this- Make you form template first like this
+
+7.3. Modify the create.html:
+	<!-- Import -->
+	{% extends 'main/base.html' %}
+
+	<!-- Change the title -->
+	{% block title %}Create List{% endblock %}
+
+	{% block content %}
+	Create List
+	<!-- form tags must have a submit button -->
+	<form method='post', action='/create/'>
+		{% csrf_token %} <!-- must add when making form tags -->
+		<!-- to show it as an unordered list (ul) -->
+		{{form.as_ul}}
+		<button type='submit',name='save'>Create New</button>
+	</form>
+	{% endblock %}
+
+## Understanding this- rewrites the template 'base.html' for view
