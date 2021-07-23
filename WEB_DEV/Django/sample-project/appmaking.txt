@@ -312,3 +312,28 @@ Ex: path("create/", views.create,name="create"),
 	{% endblock %}
 
 ## Understanding this- rewrites the template 'base.html' for view
+
+7.4. Modify the views.py:
+	from .forms import createnewlist
+	from django.http import HttpResponse,HttpResponseRedirect
+
+	# this gets the form at the forms.py and render it in create.html
+	def create(response):
+		# we set it to post so its always
+		if response.method == 'POST':
+			form = createnewlist(response.POST)
+			# asks if the data you enter fills the need info
+			if form.is_valid():
+				# get the raw data name
+				n = form.cleaned_data['name']
+				# adds it to as our new todolist
+				t = todolist(name=n)
+				t.save()
+				# redirect us to the object we created
+				return HttpResponseRedirect('/%i' % t.id)
+
+		else:
+			form = createnewlist()
+		return render(response,'main/create.html',{'form':form})
+
+## Understanding this- connects to the form and returns what to render
