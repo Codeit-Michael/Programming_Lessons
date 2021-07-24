@@ -337,3 +337,46 @@ Ex: path("create/", views.create,name="create"),
 		return render(response,'main/create.html',{'form':form})
 
 ## Understanding this- connects to the form and returns what to render
+
+8. Custom Forms
+-adding 2 functioning buttons on each list: add item and save changes button
+
+-Modify the index function at views.py
+def index(response,id):
+	ls = todolist.objects.get(id = id)
+
+	if response.method == 'POST':
+		print(response.POST)
+		if response.POST.get('save'):
+			for item in ls.items_set.all():
+				if response.POST.get("c" + str(item.id)) == 'clicked':
+					item.complete = True
+				else:
+					item.complete = False
+				item.save()
+
+		elif response.POST.get('newItem'):
+			txt = response.POST.get("new")
+			if  len(txt) > 2:
+				ls.items_set.create(text=txt,complete=False)
+			else:
+				print('INVALID')
+
+	return render(response,'main/list.html',{'ls':ls})
+
+##Understanding this- as we know, views.py is connected to the list.html and
+to models.py also its database. 
+
+*At the first if, it asks if the method is post or not/maybe get. And it is
+always be POST because this is wwhat we set in list.html.
+
+	*The second if is asking if you call 'save' or 'newwItem'. They had both
+	different functions. If we proceed to 'save', as we see we will have a
+	for loop to return each item in items_set.
+
+		*The 3rd if asks if its checkbox is checked/clicked, then it
+		sets the 'item.complete' to True. If not, False.
+
+	*Else if we proceed to 'newItem' / if response == 'newItem', it will
+	create a new task/list item by what you typed in the input box, If its
+	len < 2, its 'invalid'
