@@ -407,6 +407,7 @@ always be POST because this is wwhat we set in list.html.
 		<button type="submit", name="save", value="save">Save</button>
     </form>
 {% endblock %}
+
 ##Understanding this- its just normal so lets proceed to the for loop part.
 On each list item, we put checkbox on it. If the task is complete or
 (item.complete == True), we check its checkbox, else, not. At the bottom
