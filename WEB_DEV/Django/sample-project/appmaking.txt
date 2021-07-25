@@ -380,3 +380,39 @@ always be POST because this is wwhat we set in list.html.
 	*Else if we proceed to 'newItem' / if response == 'newItem', it will
 	create a new task/list item by what you typed in the input box, If its
 	len < 2, its 'invalid'
+
+
+-Modify list.html
+<!-- Import -->
+{% extends "main/base.html" %}
+{% block title %}View List{% endblock %}
+ 
+{% block content %}
+	<h1>{{ls.name}}</h1>
+	<form method="post" action="#">
+	{% csrf_token %}
+		<ul>
+			{% for item in ls.item_set.all %}
+				{% if item.complete == True %}
+			<!-- this inputs could give you checkbox of clomplete and not -->
+					<li><input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}</li>
+				{% else %}
+					<li><input type="checkbox", value="clicked", name="c{{item.id}}">{{item.text}}</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<!-- This buttons for adding/saving items -->
+		<button type="submit", name="newItem", value="newItem">Add Item</button>
+		<input type="text", name="new">
+		<button type="submit", name="save", value="save">Save</button>
+    </form>
+{% endblock %}
+##Understanding this- its just normal so lets proceed to the for loop part.
+On each list item, we put checkbox on it. If the task is complete or
+(item.complete == True), we check its checkbox, else, not. At the bottom
+part, those are the add and save buttons. If you click in save, the list.html
+send a response to the views.py and says the user press the save button. And
+if the Add Item button is clicked, it send a response to views.py that tells
+the Add Item button was clicked. If it was clicked, it gets the texts inside
+the input tag. If len(text) > 2, then it creates it as a new item on the 
+items_set for that todolist.
