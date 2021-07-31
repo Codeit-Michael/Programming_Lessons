@@ -417,3 +417,52 @@ if the Add Item button is clicked, it send a response to views.py that tells
 the Add Item button was clicked. If it was clicked, it gets the texts inside
 the input tag. If len(text) > 2, then it creates it as a new item on the 
 items_set for that todolist.
+
+9. Adding a sidebar (optional)
+-We're making a sidebar for easier accessing other pages like Home,Todolists,
+etc.
+
+-At the body tag, append 'a' tags for directing to links:
+	<div class='sidenav'>
+		<a href='/'>Home</a>
+		<a href='/create'>Create List</a>
+		<a href='/2'>View</a>
+	</div>
+-and also add class='main' at inside the div tag for the {% block content %}
+
+-At the top of the hed tag in base.html, append for positioning the a tags:
+	<style type="text/css">
+		body{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			gap: 50px;
+		}
+
+		.sidenav {
+			height: 100%;
+			width: 160px;
+			height: 100vh;
+			background-color: #111;
+			overflow-x: hidden;
+			padding-top: 20px; 
+		}
+
+		.sidenav a{
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #818181;
+			display: block;
+		}
+
+	.sidenav a:hover{
+		color: #f1f1f1;
+	}
+	.main{
+		margin-left: 160px;
+		padding: 0px 10px;
+
+	}
+	</style>
+
