@@ -33,3 +33,42 @@ Basic front end deployment
  -Git
  -FTP/SFTP
  -SSH
+
+Basic Frontend deployment
+-Domain name - namecheap,google domains,enom
+email hosting - namecheap,zoho mail,cpanel
+ssl certificates - let's encrypt,cloudflare,namecheap
+
+Foundation as a Frontend Dev
+-setup a productive env.
+-write HTML,CSS,JS
+-Create responsive UI
+-Build websites with dynamic functionality and work with DOM
+-Connect to 3rd party API's with fetch 
+-Understand basic HTTP
+-Use git & github or some other git repo(bitbucket, etc)
+-Deploy & manage a website or small web app
+
+-and as a frontend dev you must familiar with:
+ *React - (Context,Redux,mobX) a useful library, by facebook
+ *Vue - (Vuex) a bit easier to learn than react
+ *Angular - (Shared Service,NgRx) uses type script, by google
+ *Svelte - (Context API) better for small projects, also freelancing
+
+-Typescript - superset of JS, strict but good on big projects, and can be used
+in backend
+
+Testing - its better to learn this to prevent problems before its creates.
+
+Server Side Rendering - you can run frameworks like React and Vue on the server.
+Their advantages are SEO and easier routings
+
+Static Site Generators/SSG - generates your website pages at build time as opposed
+to real time, making them fast & secure. some examples are; Gatsby(react based),
+Gridsome(vue based),11ty(js,jekyll alternative),Jekyll(ruby based),hugo(go based)
+
+Headless CMS/content management system - backend only cms,commonly used in static site generator
+-Wordpress,strapi,sanity.io,contentful,prismic
+
+Jamstack (JS APIs & Markup) - web architecture with high performance,security &
+scability at low cost with a great dev exp.
