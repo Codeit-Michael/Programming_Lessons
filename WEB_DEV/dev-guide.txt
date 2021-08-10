@@ -1,0 +1,35 @@
+SaSS - synthitically awesome style sheets
+-CSS preprossersor that allows you to use more functionality
+	
+CSS and UI framework
+-Tailwind CSS - low level utility framework that allows many functionality and
+also customizable
+-Bootstrap - Famous framework
+-Materialize - based on material design
+-Bulma modular and lightweight
+
+UI Design
+-color & contrast -  making sure about readability
+-white space - spacing
+-scale - sizing
+-visual hierarchy - in-order arranging
+-typography - font,font sizing, etc.
+
+Javascript
+-Basics - arrays,functions,etc
+-DOM & Styling - styling
+-array methods - foreach,map,filter,reduce,etc.
+-JSON - Javascript Object Notation
+-HTTP Requests - Fetch API(GET,POST,PUT,DELETE)
+
+Version Control
+-git and github,sub version
+
+Basic front end deployment
+-static hosting - netlify,github pages,heroku
+-cpanel hosting - inmotion,hostgator,bluehost
+
+ Deploying methods
+ -Git
+ -FTP/SFTP
+ -SSH
