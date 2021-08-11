@@ -34,6 +34,7 @@ Basic front end deployment
  -FTP/SFTP
  -SSH
 
+## Frontend
 Basic Frontend deployment
 -Domain name - namecheap,google domains,enom
 email hosting - namecheap,zoho mail,cpanel
@@ -72,3 +73,30 @@ Headless CMS/content management system - backend only cms,commonly used in stati
 
 Jamstack (JS APIs & Markup) - web architecture with high performance,security &
 scability at low cost with a great dev exp.
+
+## Backend
+Server side languages(for backend/server) - focuses on data modeling and HTTP
+requests and responses. Some sample backend language:
+-Node.js,Deno(JS)	-Python		-C#	-Java
+-GoLang			-Ruby		-PHP	-Kotlin
+
+Server Frameworks - for backend web development. Sample frameworks:
+-Node	express,koa,nest,loopback
+-Python django,flask
+-PHP	Laravel,symfony,slim
+-C#	ASP.NET
+-Java	spring MVC
+-Ruby	Ruby on rails,sinatra
+-kotlin	javalin,KTor
+
+SQL vs GraphQL vs NoSQL
+ -SQL - a language, but better known for backend
+ -GraphQL - an API like REST but faster than REST
+ -NoSL - let's say it it a dirtier version of SQL
+
+Socket.io and Real-time apps - socket.io allowws real-time apps. Real-time apps
+functions like:
+-instant chat/messaging
+-real-time analytics
+-document collab
+-binary streaming
