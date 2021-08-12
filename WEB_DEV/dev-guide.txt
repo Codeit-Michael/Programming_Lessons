@@ -100,3 +100,22 @@ functions like:
 -real-time analytics
 -document collab
 -binary streaming
+
+Deployment,Servers & Dev Ops
+-Deploying apps to production,monitoring,security,containerization/virtualization, etc.
+-Hosting Platforms	Heroku,Dgital Ocean,AWS,Azure
+-Web servers		NGINX,Apache
+-Containers		Docker/Kubernetes,Vagrant
+-Image/Video		Cloudinary,S3
+-CI/CD			Jenkins,Travis Cl, Circle Cl
+
+What is HTTP - (HyperText Transfer Protocol) tells the status of your code. It was
+used for REST APIs to say the status of your code formally. HTTP is a communication
+protocol with a given mechanism for server-client data transfer.
+
+REST API & HTTP
+-APIs/REST APIs commonly use HTTP in big projects. REST can also use FTP(like HTTP)
+
+REST/REST stands for REpresentational State Transfer
+-It means when a RESTful API is called, the server will transfer to the client a
+representation of the state of the requested resource
