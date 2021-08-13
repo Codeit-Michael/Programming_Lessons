@@ -1,0 +1,47 @@
+What is Heroku
+- A PAAS (Platform as a service) where you can deploy your apps or projects to
+cloud.
+
+How to use:
+-Let's say you already has an account. Tap at the upper right corner the "create
+new" then put the name of your app.
+
+ Creating new git repo
+  -Install the heroku terminal interface by following the link, just click the
+  "Heroku CLI" and follow the instructions. ex: curl {link} in terminal
+
+  -On terminal, run "heroku login" then log in
+
+  -Head to the directory of your and if you haven't git, 'git init'
+
+  -next type heroku git: remote -a entryapp
+
+ Deploying your app
+  -git add . and git commit -am "message" for gits
+  -git push heroku master
+
+Deploying Django app: actions in terminal
+1.Login First - heroku login
+
+2.Prepare the app
+ git clone https://github.com/heroku/python-getting-started.git 
+ cd python-getting-started 
+
+3. Deploy the app
+ -Create app: heroku create
+ -Deploy: git push heroku main
+ -The application is now deployed. Ensure that at least one instance of the app
+  is running:heroku ps: scale web=1
+ -you can open the website as follows: heroku open
+
+4. Scale the app
+ -check how many dynos: heroku ps
+ -Scaling an application on Heroku is equivalent to changing the number of dynos
+  that are running. Scale the number of web dynos to zero: heroku ps:scale web=0
+ -Scaling it up again: heroku ps:scale web=1
+
+5. Declare app depencies
+ -The requirements.txt file lists the app dependencies together. When an app is
+  deployed, Heroku reads this file and installs the appropriate Python dependencies
+  using the pip install -r command. To do this locally, you can run the ff.
+  command: pip3 install -r requirements.txt
