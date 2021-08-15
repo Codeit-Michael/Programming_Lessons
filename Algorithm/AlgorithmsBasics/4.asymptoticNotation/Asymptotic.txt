@@ -1,0 +1,96 @@
+Runtime complexity
+-amount of primitive opts for problem solving
+-ex: how many commands does need to solve a problem?
+-what command/s will be used in different set of problems
+-what commands will be not work in some scenarios?
+*(including, best, ave., and worst case scenario)
+-the runtime depends on the computer spd,language,
+complier/interpreter(code runner that translates
+code into actions), etc.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Asymptotic Notation
+-used to describe the running time of an algorithm when
+the input tends toward the limiting value.
+-ignore the small numbers, it doesn't look like it can
+affect on the long run (bigger data/numbers).
+-we dont care about bigger values, we care about
+what's happening forever- means we dont care about
+the constant, we care about what has possibilites
+to grow in the future.
+
+Steps
+-identify the code's spc complexity in given input size
+-rate of growth(how fast it increases as the input size
+increases) of the running time
+--For example, suppose that an algorithm, running on an
+input of size n, takes 6n^2 + 100n + 300 machine instructions.
+6n^2 term becomes larger than the remaining terms,
+100n+300 once n becomes large enough, 20 in this case.
+A chart on your pics showing values of 6n^2 & 100n+300
+for values of n n nn from 0 to 100.
+
+-It has 3 parts:
+*big Θ (Theta) notation
+*big O notation
+*big Ω (Omega) notation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Big Theta notation Θ(n)
+-the average runtime of an algorithm 
+-once n gets large enough, the running time is between
+k1*f(n) and k2*f(n)
+-bounds the running time growth on constant factors
+-it will give you the range where the running time
+will move once the input gets larger
+ex: k1=50s and k2=100s. So as the n gets large enough
+its runtime is in between of 50-100s.
+-when we use Theta, we're saying that we have an
+asymptotically tight bound. "Asymptotically"
+because it matters for only large values of n.
+"Tight bound" because we've nailed the running
+time to within a constant factor above & below.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Big O Notation O(n)
+-we compute it by computing how many an opts happens
+-ex: you had 2 dollars and you said to your friend it
+is no more than a million. Means this is an estimation
+or it will runs in almost that amount of time
+-asymptotically upper bounds
+-It only bounds the above and not below so means its not
+the exact measure. Theta means it is the exact runtime
+-f(n) <= c*g(n) means from f(n) to g(n)(move up to); from O(n) -> O(n^n)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Big Omega Notation Ω(n)
+-asymptotically lower bounds
+-means atleast or greater than the said bound
+-f(n) >= c*g(n) means from f(n) to g(n)(move down to); from Ω(n) -> Ω(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Remember:
+1. if k >= 1 and c > 1, relationship == k is O(c)
+-big O means higher value means it's greater than 1 bc
+k is >= 1, it has posibility it is 1. While c >1 means
+it is 2 or higher.
+2. log2 n is Θ(log8 n)
+-remember, log n has a small movement in moving as the size increases
+3. n^3 log2 n is Ω(3n log8 n)
+-1st one was raised on to 3 means it is exponetial
+while the nxt is multiplied by 3 means polynomial thats
+why it happens cause polynomial is less than exponential
+4. n^4 is Ω(n^2)
+-n raised to 4 has bigger value than n raised to 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Methods on Comparing functions
+
+1. Put 3 sets of number in each complexity:
+n^2, n^3 n = ,2,3,4  
+2^2=2, 3^2=9, 4^2=16  |  2^3=6, 3^3=27, 4^3=64
+
+2. apply log on both sides: n^2, n^3 = log n^2, log n^3
+log n^2 = 2log n, log n^3 = 3log n and 2log n < 3log n
+
+
+>>check it in logChecker.png
+
+>>ex2: logChecker2.png, 2n^2 == n^2, they are the same even n^2 is more lighter
+
+>>ex.3: logChecker3.png, answer is log^2 n and sqrRt(n)=n^1/2, still cant define
+so apply the log again.

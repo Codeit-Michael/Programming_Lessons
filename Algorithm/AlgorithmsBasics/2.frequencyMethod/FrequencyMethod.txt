@@ -1,0 +1,29 @@
+Frequency Count Method
+
+Runtime Complexity
+-checks the line by line of the code to know the time complexity:
+see an example in: freqMeth.png
+-f(n) = 2n+3 but simplified as O(n) because it has the fastest growing value
+
+Space Complexity
+-also check each line to see what line contains the fastest growing value interms of space
+ex: check freqMeth0.png
+
+ex2:
+func add(A,B,n):					time complexity
+{	for (1=o,i<n,i++):				-n+1
+	{	for (j=0,j<n,j++):			-n*(n+1)
+		{	c[i,j] =A[i,j] + B[i,j]		-n*n
+			{				f(n)=2n^2+2n+1 O(n^2)
+			 }}}
+
+							space complexity
+                                                        A--n^2
+                                                        B--n^2
+                                                        C--n^2
+                                                        n--1
+                                                        i--1
+                                                        j--1
+							s(n) = 3n^2+3 O(n^2)
+
+nxt example: freqMeth1.png

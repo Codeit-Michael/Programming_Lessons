@@ -1,0 +1,32 @@
+Software creating
+-Designing Phase
+-Implementation Phase
+-Design your software first before you solve it
+
+algorithms
+-the design phase 
+-domain knowledge
+-what does your code
+-problem analyzing(how does it flow)
+
+programming
+-implementation phase
+-prgraming language
+-hardware and software (pick what os and hardware type is it for)
+-Testing(Debugging)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Algorithm characteristics
+1. Input -what/how much data does it takes
+2. Output -atleast 1 result
+3. Definiteness -how accurate is it
+4. Finiteness -stops when it reach its limitation
+5. Effectiveness -it must perform each algorithm step correctly in a finite time
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Analyzing Algorithms
+1. Time complexity -how long does it takes
+2. Space complexity -how much space does it takes
+3. Network Consumption -how much data is transferred
+4. Power -how much power is it consuming
+5. CPU registers -how much CPU register it does
+
+apllication:

@@ -1,0 +1,29 @@
+Properties of Asymptotic Notations
+
+General Property
+-if f(n)=O(g(n)) then a*f(n)=O(g(n)); also f(n)=Ω(g(n)) then a*f(n)=Ω(g(n)),etc.
+f(n) = 2n^2 + 5		a = 7
+7*f(n) = 7(2n^2 + 5) = 14n^2 + 35 is O(n^2)
+
+Reflexive Property
+-if f(n) is given then f(n) = O(f(n))
+if f(n)=n^2 then O(n^2)
+
+Transitive Property
+-if f(n) is O(g(n)) and g(n) is O(h(n)), then f(n) = O(h(n))
+-good for theta and omega
+lets say f(n) = n, g(n) = n^2, h(n) = n^3;
+n is O(n^2) and O(n^2) is O(n^3) so n=O(n^3)
+
+Symmetric Property
+-if f(n) is Θ(g(n)) then g(n) is Θ(f(n))
+f(n) = n^2 g(n) = n^2; f(n) = Θ(n^2), g(n) = Θ(n^2)
+
+Transpose Property
+-true for big O and Omega notations
+-if f(n)=O(g(n)) then g(n) is Ω(f(n))
+f(n) = n g(n) = n^2; then n is O(n^2) and n^2 is Ω(n) means n^2 is higher than n or n is lower than n^2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+examples:
+-if f(n) = O(g(n)) and f(n) = Ω(g(n)), means f(n) = Θ(g(n))
+-if f(n) = O(g(n)) and d(n) O(e(n))

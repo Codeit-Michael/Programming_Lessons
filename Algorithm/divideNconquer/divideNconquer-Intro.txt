@@ -1,0 +1,3 @@
+if the problem is tho big, you can divide them into sub problems and solve them 
+individually then combine those solutions
+
