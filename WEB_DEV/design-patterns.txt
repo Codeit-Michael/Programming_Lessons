@@ -1,0 +1,9 @@
+strategy pattern - set of algorithms which can be used interchangeably
+ex: class encapsulation
+
+Lets say you had a main class duck, and it has mallard duck and red duck.
+Both duck has quack() and swim() method, but only the mallard can fly/ has 
+a fly(). If we put fly() manually, it can be also an attribute of red duck 
+which is not flying. To avoid this, we must make the fly() private and we 
+also make a function that gives us permission to use the fly() that we give 
+to those ducks who can fly. And that's an encapsulation.
