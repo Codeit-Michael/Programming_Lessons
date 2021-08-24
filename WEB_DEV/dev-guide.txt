@@ -119,3 +119,16 @@ REST API & HTTP
 REST/REST stands for REpresentational State Transfer
 -It means when a RESTful API is called, the server will transfer to the client a
 representation of the state of the requested resource
+
+Backend devs should know
+1. Api
+-picking lang.,structuring & designing.
+2. Databases
+-picking what db to use, schemes to do, and interacting with it. Must be structured well (to identify the CAN's and CAN'Ts)
+3. Dealing with 3rd party services
+ A third-party service provider is generally defined as an external person or company who provides a service or technology as part of a contract.
+EX: 
+Account providers -fb,google,etc.
+Payment providers
+-paypal,stripes,etc.
+4. Infrastructure work
