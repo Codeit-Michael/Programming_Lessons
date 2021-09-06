@@ -1,0 +1,80 @@
+PRINTING HELLO WORLD IN PYTHON DJANGO FRAMEWORK
+
+Django is a python framework used for making web apps. If you don't have any 
+idea about using django frame work, I'm going to teach you a simple command 
+using django, so let's get started!!
+
+1. Install requirements
+  On your command line, type "pip install django" if you are using 
+windows. If you are using linux, installing it is a bit different. To install 
+this on your linux, open your terminal and type "pip3 install django".
+
+
+2. Make your project and your app
+  In Django, project and app are different from each other. Django apps are the 
+those who contains characteristics and features of you web app. On another hand,
+Django projects are the compiler of the Django apps. It may contain one or more 
+apps and apps can contain one or more features. You must create your project 
+first before your app.
+
+To make a project, select a directory first where you want to your local 
+django project. After selecting one on your cmd/terminal, type:
+    django-admin startproject myProject
+
+  "myProject" is the name of our django project. Inside the "myProject" directory, 
+you can see another "myProject" directory and that is our project. It also contains 
+"db.sqlite3" which is our database & "manage.py" which we will use to controll our 
+django project.
+
+To make an app, inside the first "myProject" directory, type:
+    python manage.py startapp Myapp
+  
+But since I am using linux, I'm going to use:
+    python3 manage.py startapp myApp
+
+"myApp" is the name of our django app.
+
+
+3. Connecting our app to our project
+  We need to connect our app on our project to access our app directory, "myApps". To 
+do this, head to "myPrjoect/settings.py", then find the list of "INSTALLED_APPS". List 
+there your app by typing:
+    "myApp.apps.MyappConfig"
+
+"MyappConfig" is a class in apps.py which is located in "myApp" directory means 
+"myApp.apps.MyappConfig" is a path to "MyappConfig". Now, we can access everything 
+on our app.
+
+To access the app, we need to connect our "myProject" to our "myApp" using the urls.py. 
+In our "myProject/urls.py", next to other imports, type:
+    from myApp import views
+
+  After it head to urlpatterns and type:
+    path('', views.home, name = "home")
+
+  By the way, the format for urlpattern is:
+    path('link', views.function/class views, name='name')
+
+  This urlpattern is just one of many ways to do this work but this is one of 
+the easiest way.
+
+
+4. Modify the app views
+  Now the final step is to make some modification in our myApp/views.py. In views.py, 
+type:
+    from django.http import HttpResponse
+
+  Then type:
+    def home(request):
+        return HttpResponse("Hello world")
+
+
+5. Testing our code
+  We want to know it this is working so head to the terminal again and type:
+    python manage.py runserver
+
+  If you are using windows but I'm on linux so I'm going to use "python3" instead of python. 
+After running, it should look like this:
+
+To see it in browser "CRTL" + "Left Click" link and it will direct you to your browser.
+And it should look like this:
