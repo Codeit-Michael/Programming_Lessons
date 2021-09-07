@@ -1,0 +1,22 @@
+What is open source?
+The term open source refers to something people can modify and share because 
+its design is publicly accessible.
+
+What is open source software?
+Open source software is software with source code that anyone can inspect, 
+modify, and enhance.
+
+Private softwares are called close source softwares or proprietary softwares.
+
+What is Cloud Computing?
+Cloud computing is the delivery of computing services – including servers, 
+storage, databases, networking, software, analytics and intelligence – over 
+the Internet (“the cloud”) to offer faster innovation, flexible resources and 
+economies of scale. In the simplest terms, cloud computing means storing and 
+accessing data and programs over the internet instead of your computer's hard 
+drive.
+
+Orienting yourself to a new project
+Learn to read the room before starting conversations about your interests. Why?
+how if they are talking about goldfish and you start to talk about llamas? They 
+will stare so strange to you right?
