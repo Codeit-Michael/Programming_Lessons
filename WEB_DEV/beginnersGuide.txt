@@ -96,3 +96,19 @@ thinks and works.
 
  *Synchronous chat channel: Some projects use chat channels (such as Slack or 
   IRC) for casual conversation, collaboration, and quick exchanges.
+
+
+Finding a Project to contribute to
+
+You can use one of the following resources to help you discover and contribute
+to new projects:
+ *GitHub Explore
+ *Open Source Friday
+ *First Timers Only
+ *CodeTriage
+ *24 Pull Requests
+ *Up For Grabs
+ *Contributor-ninja
+ *First Contributions
+ *SourceSort
+
