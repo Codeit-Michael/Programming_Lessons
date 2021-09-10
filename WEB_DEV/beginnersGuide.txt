@@ -112,3 +112,68 @@ to new projects:
  *First Contributions
  *SourceSort
 
+
+Contributing to a Project
+
+ *Give context
+  If you find an error or you had a new idea, tell them what you were doing and 
+  explain it as clear as you can.
+
+ *Do your homework beforehand
+  Before asking for help check the project's README,documentation,mailing list,
+  issues(open/closed) then search for answers.
+
+ *Keep your requests direct and short
+  Every contribution, no matter how simple or helpful, requires someone else’s 
+  review. Many projects have more incoming requests than people available to 
+  help. Be concise, straight to your point like "I'd like to write an API 
+  tutorial"
+
+ *Keep all communication public
+  Your questions and their answer as response to you may help to other people 
+  who has the same problem as yours.
+
+ *It’s okay to ask questions (but be patient!)
+  Everybody was new to the project at some point, and even experienced 
+  contributors need to get up to speed when they look at a new project. By the 
+  same token, even longtime maintainers are not always familiar with every part 
+  of the project. Show them the same patience that you’d want them to show to 
+  you.
+   EX: "Thanks for looking into this error. I followed your suggestions. 
+   Here’s the output.”
+
+ *Respect the community's decision
+  If they disagree to your plan or they had different vision to the project, you
+  must respect their decision and listen to their reason. If you disagree to 
+  them, you can always work on your own fork or start your own project.
+
+
+Gathering Context
+ Before you open an issue or pull request, check the project’s contributing docs
+  (usually a file called CONTRIBUTING, or in the README), to see whether you 
+ need to include anything specific. For example, they may ask that you follow 
+ a template, or require that you use tests.
+
+ If you want to make a substantial contribution, open an issue to ask before 
+ working on it. It’s helpful to watch the project for a while (on GitHub, you 
+ can click “Watch” to be notified of all conversations), and get to know 
+ community members, before doing work that might not get accepted.
+
+Opening an issue
+
+You should usually open an issue in the following situations:
+ *Report an error you can’t solve yourself
+ *Discuss a high-level topic or idea (for example, community, vision or 
+  policies)
+ *Propose a new feature or other project idea
+
+Tips for communicating on issues:
+ *If you see an open issue that you want to tackle, comment on the issue to let 
+  people know you’re on it. That way, people are less likely to duplicate your 
+  work.
+ *If an issue was opened a while ago, it’s possible that it’s being addressed 
+  somewhere else, or has already been resolved, so comment to ask for 
+  confirmation before starting work.
+ *If you opened an issue, but figured out the answer later on your own, comment 
+  on the issue to let people know, then close the issue. Even documenting that 
+  outcome is a contribution to the project.
