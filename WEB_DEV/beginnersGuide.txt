@@ -177,3 +177,61 @@ Tips for communicating on issues:
  *If you opened an issue, but figured out the answer later on your own, comment 
   on the issue to let people know, then close the issue. Even documenting that 
   outcome is a contribution to the project.
+
+
+Opening a Pull Request
+
+If the project is on GitHub, here’s how to submit a pull request:
+
+ *Fork the repository and clone it locally. Connect your local to the original 
+  “upstream” repository by adding it as a remote. Pull in changes from 
+  “upstream" often so that you stay up to date so that when you submit your pull
+   request, merge conflicts will be less likely. (See more detailed instructions
+   here.)
+
+ *Create a branch for your edits.
+
+ *Reference any relevant issues or supporting documentation in your PR (for 
+  example, “Closes #37.”)
+
+ *Include screenshots of the before and after if your changes include 
+  differences in HTML/CSS. Drag and drop the images into the body of your pull 
+  request.
+
+ *Test your changes! Run your changes against any existing tests if they exist 
+  and create new ones when needed. Whether tests exist or not, make sure your 
+  changes don’t break the existing project.
+
+ *Contribute in the style of the project to the best of your abilities. This may
+   mean using indents, semi-colons or comments differently than you would in 
+  your own repository, but makes it easier for the maintainer to merge, others 
+  to understand and maintain in the future.
+
+
+Things may happen after you submit your contribution
+
+ *You don't get response 
+  Hopefully you checked the project for signs of activity before making a 
+  contribution.  If you know the name of the right person to review your 
+  contribution, you can @-mention them in that thread. If still nothing happens,
+  it's a bad feeling, find another project or way to contribute.
+
+ *Someone requests changes to your contribution
+  When someone requests changes, be responsive. They’ve taken the time to review
+   your contribution. Opening a PR and walking away is bad form. If you don’t 
+  know how to make changes, research the problem, then ask for help if you need 
+  it. If you don’t have time to work on the issue anymore (for example, if the 
+  conversation has been going on for months, and your circumstances have 
+  changed), let the maintainer know so they’re not expecting a response. 
+  Someone else may be happy to take over.
+
+ *Your contribution doesn't get accepted
+  Your contribution may or may not be accepted in the end. Hopefully you didn’t 
+  put too much work into it already. If you’re not sure why it wasn’t accepted, 
+  it’s perfectly reasonable to ask the maintainer for feedback & clarification. 
+  Ultimately, however, you’ll need to respect that this is their decision. Don’t
+   argue or get hostile. You’re always welcome to fork and work on your own 
+  version if you disagree!
+
+ *Your contribution get accepted
+  There you go baby, You made it!!
