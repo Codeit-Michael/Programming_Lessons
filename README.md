@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @MichaelMaranan
 - 👀 I’m interested in Web Development and Data Analysis
 - 🌱 I’m currently learning about Python and Web Development Programming
-- 💞️ I’m looking to collaborate on Pyhton related open source Projects
+- 💞️ I’m looking to collaborate on Python related open source Projects
 - 📫 How to reach me marananm030@gmail.com
 
 Hey there Humans,
