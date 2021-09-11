@@ -1,0 +1,12 @@
+1. Git clone from the git repository you need to push to. Just make sure you 
+  create a new directory for the cloned code.
+
+2. Copy the contents of the cloned repository into the local directory that has 
+  your current code. Make sure to copy the .git (hidden) file.
+
+3. cd into your local directory and run "git remote -v". You should see the 
+  remote repository git address.
+
+4. "git add -A" or "git add ." to add whatever change you require and commit it.
+
+5. Finally "git push"
