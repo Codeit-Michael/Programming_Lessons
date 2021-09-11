@@ -1,0 +1,23 @@
+5 branches of Git
+
+Feature branch
+  A branch were you make one or more feature one by one. You can make another
+  branch under this and for each feature you make and when your done at that 
+  feature, you can merge it in your feature branch. The next branches will be 
+  processed by the software admin or anyone that got those job.
+
+Develop branch 
+  Your features from feature branch will be tested in theis branch.
+
+Release branch 
+  After the feature satisfies the requirements in Develop branch, it will be 
+  merged in Release branch where it will be tested in other cases. If it passed 
+  the tests, then it will be merged in Master branch.
+
+Master branch
+  The place where main software was in.
+
+Hotfix branch
+  Branch for quick fixes of bugs that found on master branch even the code is 
+  working. In this case, the software won't go back on other lower testing 
+  branches because it is in main already, means it passed the test before.
