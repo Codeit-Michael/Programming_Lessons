@@ -90,3 +90,15 @@ commit was not repeated}- show contents
 *lets delete file1.js first in git- git rm first1.js then commit
 *git restore -h
 *git restore --source=HEAD~1 file1.js
+
+#Git and github commands for terminal/cmd
+*push - from your local repo to your github repo
+ ex: git push, git push origin master
+*clone - saving/replicating a github repo to your local storage
+ ex: git clone {github repo url}
+
+#What is pull request?
+*Pull request is a process were a forked repo getting merge to original
+repo. EX: Steve has an open source project, and John forked it. John fixed 
+some bugs and request to the project owner which is Steve that he fixed some 
+bugs he found and apply it to the main, in other words, a pull request.
