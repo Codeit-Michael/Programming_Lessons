@@ -1,0 +1,55 @@
+Why class based views?
+-Inheritance so we can write reusable code & make our app more DRY (Don't Repeat 
+Yourself)
+-Built in methods and views to eliminate redundancy for common use cases.
+-separate our code by http method types such as GET and POST. 
+
+
+Example: Function based view
+
+# Views.py
+from django.shortcuts import render
+from .models import Product
+
+def productList(request):
+	products = Product.objects.all()
+	context = {'products/':products}
+	return render(request, 'base/product_list.html', context)
+
+# Urls.py
+from . import views 
+
+urlpatterns = [
+    path('products', views.productsList, name='products'),
+]
+
+
+Ex: Class based view
+
+# Views.py
+from django.views.generic.list import ListView
+from .models import Product 
+
+class ProductList(ListView):
+	model = Product
+
+# Urls.py
+from . import views 
+
+urlpatterns = [
+    path('products', views.ProductList.as_view(), name='products'),
+]
+
+
+As we see here they have some differences. 
+
+The 'as_view()' method
+ Because we are using a CBV, we need to add the “as_view” method for our url resolver.
+This is because the django url resolver cannot process a class but instead needs a 
+function. To resolve this, we trigger the “as_view” method from our “View” class which 
+we inherited from and the “as_view” method will call the correct view function 
+depending on the method sent, therefore giving the url resolver a function.
+
+
+ Django Class Based Views can make different actions using the built in methods from 
+generic views (django.views.generic.list)
