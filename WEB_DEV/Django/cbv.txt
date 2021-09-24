@@ -1,6 +1,6 @@
-Why class based views?
--Inheritance so we can write reusable code & make our app more DRY (Don't Repeat 
-Yourself)
+## Why class based views?
+-Inheritance so we can write reusable code & make our app more DRY (Don't Repeat
+ Yourself)
 -Built in methods and views to eliminate redundancy for common use cases.
 -separate our code by http method types such as GET and POST. 
 
@@ -41,15 +41,95 @@ urlpatterns = [
 ]
 
 
-As we see here they have some differences. 
+-As we see here they have some differences. 
 
-The 'as_view()' method
- Because we are using a CBV, we need to add the “as_view” method for our url resolver.
+## The 'as_view()' method
+-Because we are using a CBV, we need to add the “as_view” method for our url resolver.
 This is because the django url resolver cannot process a class but instead needs a 
 function. To resolve this, we trigger the “as_view” method from our “View” class which 
 we inherited from and the “as_view” method will call the correct view function 
 depending on the method sent, therefore giving the url resolver a function.
 
 
- Django Class Based Views can make different actions using the built in methods from 
+-Django Class Based Views can make different actions using the built in methods from 
 generic views (django.views.generic.list)
+
+
+-In this case we inherited from a built in view called ListView which at a minimum just 
+needed a model name or a queryset. The view already knows which template to render, and 
+how to pass in the data into the template. With a function based view we have to take 
+care of each step by first querying the database, passing in our context data and then 
+rendering our template.
+
+
+## Separating code with HTTP methods
+
+Ex: Function based view
+
+Views.py
+
+from django.shortcuts import render
+from .models import Product
+
+def productsList(request):
+	products = Product.objects.all()
+	
+	if request.method == 'POST':
+	Product.object.create()
+	
+	context = {'products':products}
+	return render(request, 'base/product_list.html', context)
+
+ 
+
+Ex: Class based view 
+
+Views.py
+
+from django.views.generic.list import ListView
+from .models import Product 
+
+class ProductList(ListView):
+	model = Product
+
+	def post(self, request):
+		Product.object.create()
+
+-With class based views we have a function for different methods. So if we send a GET 
+request, then the “get” function gets triggered and any logic we have in there gets 
+processed. If we send a “post” request then that request is sent to the “post” function 
+for processing. This makes for much cleaner code by separating our request. 
+
+
+## The "View" class 
+-While django provides us with a number of built in class based views to work with, at 
+the core of all these views in one main view called “View”. This is a class that all 
+other views will inherit from and provides us with the core functionality to make a 
+django class based view.
+
+from django.views.generic import View
+from .models import Product 
+
+class ProductList(View):
+
+    def get(self, request, *args, **kwargs): 
+        products = Product.objects.all()
+        context  = {'products':products}
+        return render(request, 'base/product_list.html', context)
+
+    def post(self, request, *args, **kwargs): 
+        pass
+
+
+## Keeping things DRY
+
+-Now in this case all we need is a simple view that returns back a template with a queryset 
+of data. Thankfully django already knows that this is a common task so we don't have to 
+write all the logic ourselves. This is a perfect example of where we may want to use the 
+built in “ListView” turning the view from what we currently have into this:
+
+from django.views.generic.list import ListView
+from .models import Product 
+
+class ProductList(ListView):
+	model = Product
