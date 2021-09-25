@@ -66,8 +66,7 @@ rendering our template.
 
 Ex: Function based view
 
-Views.py
-
+# Views.py
 from django.shortcuts import render
 from .models import Product
 
@@ -84,8 +83,7 @@ def productsList(request):
 
 Ex: Class based view 
 
-Views.py
-
+# Views.py
 from django.views.generic.list import ListView
 from .models import Product 
 
@@ -133,3 +131,91 @@ from .models import Product
 
 class ProductList(ListView):
 	model = Product
+
+
+## CRUD Application Example
+
+-Let’s see what a collection of views would look like for a simple application with CRUD 
+functionality. Let's say our todo app will do the following:
+ 1.List out our to do items
+ 2.View a single item
+ 3.Create a new item
+ 4.Update an existing item
+ 5.Delete an item
+
+-Here’s what each view should look like in our application. 
+
+# Views.py
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from .models import Task
+
+class TaskList(ListView):
+	   model = Task
+
+class TaskDetail(DetailView):
+	   model = Task
+
+class TaskCreate(CreateView):
+	   model = Task
+       fields = ['title', 'description', 'complete']
+       success_url = reverse_lazy('tasks')
+
+class TaskUpdate(UpdateView):
+       model = Task
+       fields = ['title', 'description', 'complete']
+       success_url = reverse_lazy('tasks')
+
+class TaskDelete(DeleteView):
+      model = Task
+      context_object_name = 'task'
+      success_url = reverse_lazy('tasks')
+
+ 
+# urls.py 
+from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, TaskDelete
+
+urlpatterns = [
+    path('', TaskList.as_view(), name='tasks'),
+    path('task/<str:pk>/', TaskDetail.as_view(), name='task'),
+    path('task-create/', TaskCreate.as_view(), name='task-create'),
+    path('task-update/<str:pk>/', TaskUpdate.as_view(), name='task-update'),
+    path('task-delete/<str:pk>/', TaskDelete.as_view(), name='task-delete'),
+]
+
+-The following built in views have been created by the django team to make these types of 
+operations easier for us.
+
+
+Overriding Default values
+
+# LISTVIEWS
+class TaskList(ListView):
+	model = Task
+	template_name = 'base/tasks.html'
+	context_object_name = 'tasks'
+	paginate_by = 5
+	ordering = ['-date_created']
+
+# DETAILVIEW
+class TaskDetail(DetailView):
+     model = Task
+     template_name = 'base/task.html'
+     context_object_name = 'task'
+     pk_url_kwarg = 'custom_pk'
+
+# CREATEVIEW
+class TaskCreate(CreateView):
+    model = Task
+	success_url = reverse_lazy('tasks')
+	template_name = 'base/form.html'
+	form_class = TaskForm
+
+DELETEVIEW
+class TaskDelete(DeleteView):
+    model = Task
+    template_name = 'base/delete.html'
+    context_object_name = 'task'
+    pk_url_kwarg = 'custom_pk'
