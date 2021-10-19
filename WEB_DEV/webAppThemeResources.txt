@@ -1,0 +1,10 @@
+*html5up.net
+*startbootstrap
+*templated.co
+*freehtml5.co
+*colorlib.com
+*zerotheme.com
+*styleshout.com
+*html5xcss3.com
+*athemes.com
+*creative-tim.com
