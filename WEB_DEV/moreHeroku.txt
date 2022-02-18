@@ -1,0 +1,69 @@
+Things expected before to start Virtual environment (not mandatory but much better if can)
+
+Requirements
+-sudo apt  install heroku - setup terminal in site
+-pip3 install gunicorn, django-heroku/django-on-heroku, django
+
+Creating new app
+*heroku create
+*setting up: heroku git:remote -a given-app-name
+	ex: fast-osasis-74831
+
+Running through heroku
+-wsgi.py file allows our app to initalize it in heroku;
+	gunicorn project.wsgi
+
+Setting Procfile
+-Heroku Procfile tells heroku how to run the app
+*make a Procfile: touch Procfile
+*tell how to run using web worker;
+	Procfile-file/ web: gunicorn project.wsgi
+
+Running heroku app locally
+*heroku local
+Note: make sure '0.0.0.0' is listed on "ALLOWED_HOST" at settings.py to access or else, you'll receive an error
+
+Uploading the app into heroku online
+-after making sure the latest app version is committed to the git repo:
+*if has no github repo: git push heroku master
+*else: connect manually in the heroku site
+
+Setting up 'STATIC_ROOT'
+-If you could notice we can get an error after we push because of collectstatic.
+-We can just disable it by 'heroku config:set DISABLE_COLLECTSTATIC=1', but we're gonna need it so do setup instead
+*base/settings.py, add:
+	import os
+	# below STATIC_URL
+	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+Setting up the PostgreSQL
+-psycopg2 - PostgreSQL db adapter
+	pip install psycopg2-binary
+*else:
+	sudo apt install libpq-dev python3-dev
+	pip install psycopg2
+
+Configuring DB
+*change the `settings.py/DATABASES` into:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'HOST': 'd29hnlscte2i0h',
+        'PORT': 'ec2-54-156-110-139.compute-1.amazonaws.com',
+        'USER': 'bkndducriwowaj',
+        PASSWORD: '719a41afe0f469da4bca7ba10e595372a3f27e5c53da4d53418243cbacc59cda'
+    }
+}
+*data presented from HEROKU APP'S DATABASE_URL = postgres://bkndducriwowaj:719a41afe0f469da4bca7ba10e595372a3f27e5c53da4d53418243cbacc59cda@ec2-54-156-110-139.compute-1.amazonaws.com:5432/d29hnlscte2i0h
+*DATABASE_URL -> DATABASES format = postgres://`USER`:`PASSWORD`@`PORT`:`HOST`
+
+Handling Static Files
+*Consider steps after fixing static files and configuration
+*Install whitenoise
+*Add in `settings.py/MIDDLEWARE`:
+	whitenoise.middleware.WhiteNoiseMiddleware
+
+Turn off Debug
+-Debug should be turned off if the app is deployed/in production, means it is finished
+	DEBUG = False
