@@ -1,0 +1,16 @@
+ER diagram - Entity Relationship diagram
+
+Entity - object/class
+Attributes - Entity's info
+Primary key - unique access id
+Composite Attributes - atts can divide into sub-atts => (name:1st,last)
+Multi-valued Attribute - can have more than 1 value
+Derived Attributes - can have through other attribute's value
+Multiple Entities  - more than 1 object/class
+Relationship - connection between entities
+Partial,Total Participation - not all, all must participate in the relationship
+Relationship Cardinality - identifies how many entity is allowed to connect in 
+a relationship of two; no. of instances of an entity from a relation that can be
+ associated with the relation. => (1-1,1-Many,Many-Many)
+Weak entity - can't stand alone entities; like Exam class w/o Class class
+Identifying Relationship - relationship between weak Entity & Entity
