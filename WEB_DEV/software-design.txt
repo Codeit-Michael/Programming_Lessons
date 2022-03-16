@@ -1,0 +1,79 @@
+scalability & complexity - readable and does the work faster
+
+reusable - can do task in all aplicable cases consider splitting diff solutions 
+
+renaming import to evade errors
+
+codes to packages - like the django apps, just add "_init__.py" inside the 
+package folder, with the other py files
+-Package
+>>> folder-name
+...  /*__init__.py
+...  /*module.py
+...  /*module.py
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Requirements to Software
+
+1. List all the possble class and objects you see from the requirements
+ex: info from a university client 
+ 1. Student
+ 2. Professor
+ 3. Course
+ 4. Enrol
+
+
+2. Identify what info/objects you need for each class
+ex:
+ Adress
+  -country: str
+  -province/state: str
+  -city: str 
+  -streetAdress: str
+  -postal/zip code: 
+
+ Person
+  -firstname: str
+  -lastname: str
+  -midname: str
+  -birthDate: date
+  -adress: str
+  -phone: str (limit - 11 digits)
+
+ Student
+  -international: boolean
+  -isPartTime(): boolean
+  -isOnProbation(): boolean
+
+ Professor
+  -salary: float
+
+ Course
+  -name: str
+  -code: str
+  -maxStudent: int
+  -minStudent: int
+  -isCancelled(): boolean 
+  -start: date
+  -end: date
+
+ Enrol
+  -date: date
+  -grade: float
+
+*we only list the unique info for each Class, since both Professor and Student 
+had similar functionality like name age gender phone adress, we are making 
+another class we'll call "Person" where the class Student and Prof will 
+originate. This is an OOP Principle which is what we call "Inheritance".
+*we can make an attribute adress in Person class but it is also practical to 
+make a separate class for it to track who lives in this area, etc.
+
+
+3. Linking associations (how they are all connected)
+Drawing and linking them to each other through lines and putting in some special
+ symbols in the their line connections to configure what and how many 
+associations they have.
+ 1..2 => 1 or 2
+ 1..* => 1 or more
+ - => attribute
+ + => method/function
