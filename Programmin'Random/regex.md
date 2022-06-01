@@ -41,6 +41,7 @@ expression
 `^F` - starts with 'F'
 `.+` - has one or more any characters
 `:` - ends with ':'
+`\$` - use to search a dollar sign ($)
 **Why `'From: Uisng the :'` instead `'From:'`?**
 ~It always take the long one always, not the short one (that's why greedy matching)
 ~To make the `'^F.+:'` above ungreedy, do `'^F.+?:'`
@@ -60,3 +61,5 @@ expression
 >>> e2 = re.findall('^my (\S+@\S+)', x)
 ```
 ~`e1` and `e2` has the same output
+
+
