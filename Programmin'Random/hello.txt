@@ -1,0 +1,46 @@
+1. Backend programming language
+*Python /
+*Java 
+*Php 
+
+2. Framework
+*Django /
+*Flask /
+*Spring 
+*Micronaut 
+
+3. DSA
+-Done
+
+4. DBs and Cache
+*PostgreSQL 
+*Oracle 
+*AWS Dynamo DB 
+*SQLite /
+
+5. HTML, CSS & Javascript
+*HTML /
+*CSS (Needs improvement)
+*Javascript (Needs improvement)
+
+6. Familiarity with servers - know more about this
+*Apache 
+*NGINX 
+*Microsoft 
+
+7. Knowledge of APIs (Needs improvement)
+*Rest 
+
+8. Version control & Control Systems
+*Git control /
+*Git flow 
+
+9. Problem solving
+*Be good at problem solving
+
+10. Good comm. & interpersonal skills
+*mostly good comm. in frontend devs
+
+OAuth (authorization)
+-limited permission for the apps that needs access on a specific file, info on your google account.
+-Once an app is trying to access some of your files &/or info, google will asks you about this. If you recognize them, google will give this app a limited token for what it is just asking for so everytime it needs access on your files &/or info it just hand its permission token instead of asking you again.
