@@ -1,0 +1,26 @@
+-Networking Protocol
+-Write a browser
+-Networking: Text Processing
+-Networking: Using urllib
+-Networking: webscraping
+-Using web services
+-Web services: XML
+-Web services: XML Schema
+-Web services: JSON
+-Web services: Service Oriented Aproach
+-Web services: API
+-Web Services: API Rate Limiting and Security
+-Py Objects
+-Objects: A Sample Class
+-Object Lifecycle
+-Objects: Inheritance
+-Relational Databases and SQLite
+-Make a Relational Database
+-Relational Database Design
+-Representing Relationships in a Relational Database
+-Relational Databases: Relationship Building
+-Relational Databases: Join Operation
+-Visualizing Data with Python
+-Data Visualization: Page Rank
+-Data Visualization: Mailing Lists
+-
