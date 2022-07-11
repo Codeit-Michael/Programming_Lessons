@@ -12,20 +12,22 @@ def palindrome():
         if word == 'exit':
             break
 
-        base_word, reversed_word = [],[]           
-        for x in word:
-            if x.isalnum():
-                base_word.append(x.lower())
-                reversed_word.insert(0,x.lower())
+        cleaned_word = [x.lower() for x in word if x.isalnum()]
+        mid = len(cleaned_word) // 2
+        if mid < len(cleaned_word)/2:
+            mid+=1
 
-        for x in range(len(base_word)):
-            if base_word[x] == reversed_word[x]:
-                answer = True
-            else:
+        left,right = cleaned_word[0:mid],cleaned_word[mid:]
+        right.reverse()
+
+        for x in range(len(right)):
+            if left[x] != right[x]:
                 answer = False
                 break
+            else:
+                answer = True
         print(answer)
-        base_word.pop(),reversed_word.pop
+    return answer
 
 if __name__ == '__main__':
-    print(palindrome())
+    palindrome()
