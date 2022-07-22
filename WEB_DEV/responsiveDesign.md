@@ -51,3 +51,34 @@
 	<input name='AC/DC' id='dc' value='ac' type='radio'><label for='dc'>DC</label>
 </fieldset>
 ```
+
+### HTML file areas that souls be present
+-`lang` attribute in HTML tag specifies what language do its contents have
+-`<DOCTYPE html>` called the documentation type/DOCTYPE declaration is an instructions to the web browser about what version of HTML the page is written in.
+-`<meta charset="UTF-8"` tells the browser to encode multiple languages
+
+***
+
+## CSS Basics
+-`<section></section>` used when having  2 or more diff. sections
+-CSS syntax:
+```css
+selector {property:value;}
+``` 
+-Importing CSS in HTML
+```hmtl
+<link rel="stylesheet" href="styleDIR.css"/>
+```
+
+### Responsive Site Design
+-Design will be responsive depends on the device used to load it
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+```
+-`<article></article>` elements commonly contain multiple elements that have related information
+```html
+  <article>
+    <p>French Vanilla</p>
+    <p>3.00</p>
+  </article>
+```
