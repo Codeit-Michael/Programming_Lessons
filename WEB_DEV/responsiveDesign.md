@@ -82,3 +82,89 @@ selector {property:value;}
     <p>3.00</p>
   </article>
 ```
+-To make things align on the same line:
+```css
+.item {
+  display:inline-block;
+}
+```
+-If you have `p` tags, it will bring the other one below. What you should do is delete all the whitespaces between them (in HTML file) and make them on the same line.
+```html
+<!-- instead of this -->
+<p>Pumpkin Spice</p>
+<p>3.50</p>
+
+<!-- do this -->
+<p>Pumpkin Spice</p><p>3.50</p>
+```
+-`padding` property in CSS gives space on your div, etc. depends on px or % you give.
+-`max-width:500px;` controls the element to not be loose your designs on wide screens.
+
+### FONT and FONT-FAMILY
+-Typeface (aka font) means the design, font means the file containing the typeface, and font-family means collection of related fonts. 
+```css
+h1, h2 {
+  font-family: Impact;
+}
+```
+-You can add a fallback value for the font-family by adding another font name separated by a comma.
+```css
+h1, h2 {
+  font-family: Impact, serif;
+}
+```
+-Change the height of the hr element using `height` attribute.
+```css
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+```
+>> Note: the `border-width` has default value of 1px. If you give an `hr` a height of `2px`, then the total height value of hr is 4px (2px + top border-width px + bottom border-width px)
+
+### Tag styling with conditions
+```css
+/* customed color */
+a {
+  color: black;
+}
+
+/* color that appears when already visited */
+p:visited {
+  color: grey;
+}
+
+/* color when hovered */
+h1:hover {
+  color: brown;
+}
+
+/* activated */
+a:active {
+  color: white;
+}
+```
+-The browser having some default top margin for the h1 element. You can change the top margin of the h1 element to 0 to remove all the top margin.
+```css
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+```
+### Centering an Image
+```css
+img {
+  display:block; /* making it a 1-line element */
+  margin-left:auto;
+  margin-right:auto;
+}
+```
+
+### Easier way of pulling item
+-Use `-px` value for pulling your nodes on the place you want/
+```css
+img {
+  display: block;
+  margin-top: -25px;
+```
