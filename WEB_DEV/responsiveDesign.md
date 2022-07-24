@@ -55,7 +55,7 @@
 ### HTML file areas that souls be present
 -`lang` attribute in HTML tag specifies what language do its contents have
 -`<DOCTYPE html>` called the documentation type/DOCTYPE declaration is an instructions to the web browser about what version of HTML the page is written in.
--`<meta charset="UTF-8"` tells the browser to encode multiple languages
+-`<meta charset="UTF-8">` is a universal character set that includes almost every character from all human languages
 
 ***
 
@@ -168,3 +168,24 @@ img {
   display: block;
   margin-top: -25px;
 ```
+
+***
+
+## About Colors
+
+### About Divs
+-Divs are the elements used to define parts of a document (a divider), so that they are identifiable when a unique classification is necessary.
+-If you create 2 different divs after each other and give it a color, height, and width, they look like one whole div because they stick to each other. On its stylesheet, give it a `margin` attribute and give a `'no.'px` value like `10px` or something.
+```css
+marker {
+  width: 200px;
+  height: 25px;
+  background-color: red;
+  margin: 10px auto;
+}
+```
+
+### Color setting
+-Instead of using color names in CSS, you can use RGB colors which has count from 0-255. To use this, you can give a `color` or `background-color` attribute a value of `rgb(no.,no.,no.,)`. `rgb(0,0,0)` is equal to black.
+-`rgb(255,0,0)`=`red`, `rgb(0,255,0)`=`green`,`rgb(0,0,255)`=blue
+-In seconddary colors; `rgb(255,255,0)`=`yellow`,`rgb(0,255,255)`=`cyan`,`rgb(255,0,255)`=`magenta`
